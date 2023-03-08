@@ -25,7 +25,7 @@ namespace QuanLyKhachSan
             }
             else if((txtUser.Text!="admin") || (txtPass.Text!="123"))
             {
-                MessageBox.Show("Thông tin không chính xác", "Thông báo");
+                MessageBox.Show("Thông tin không chính xác!!!", "Thông báo");
             }
             else
             {
