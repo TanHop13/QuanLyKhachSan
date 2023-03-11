@@ -56,7 +56,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(208, 557);
+            this.panel1.Size = new System.Drawing.Size(209, 537);
             this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -70,7 +70,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnBaoCao, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnExit, 0, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 224);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 204);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -79,7 +79,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(208, 333);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(209, 333);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // btnKH
@@ -88,10 +88,11 @@
             this.btnKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKH.Location = new System.Drawing.Point(3, 3);
             this.btnKH.Name = "btnKH";
-            this.btnKH.Size = new System.Drawing.Size(202, 49);
+            this.btnKH.Size = new System.Drawing.Size(203, 49);
             this.btnKH.TabIndex = 0;
             this.btnKH.Text = "Quản lý khách hàng";
             this.btnKH.UseVisualStyleBackColor = true;
+            this.btnKH.Click += new System.EventHandler(this.btnKH_Click);
             // 
             // btnNV
             // 
@@ -99,10 +100,11 @@
             this.btnNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNV.Location = new System.Drawing.Point(3, 58);
             this.btnNV.Name = "btnNV";
-            this.btnNV.Size = new System.Drawing.Size(202, 49);
+            this.btnNV.Size = new System.Drawing.Size(203, 49);
             this.btnNV.TabIndex = 0;
             this.btnNV.Text = "Quản lý nhân viên";
             this.btnNV.UseVisualStyleBackColor = true;
+            this.btnNV.Click += new System.EventHandler(this.btnNV_Click);
             // 
             // btnP
             // 
@@ -110,10 +112,11 @@
             this.btnP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnP.Location = new System.Drawing.Point(3, 113);
             this.btnP.Name = "btnP";
-            this.btnP.Size = new System.Drawing.Size(202, 49);
+            this.btnP.Size = new System.Drawing.Size(203, 49);
             this.btnP.TabIndex = 0;
             this.btnP.Text = "Quản lý phòng";
             this.btnP.UseVisualStyleBackColor = true;
+            this.btnP.Click += new System.EventHandler(this.btnP_Click);
             // 
             // btnDV
             // 
@@ -121,7 +124,7 @@
             this.btnDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDV.Location = new System.Drawing.Point(3, 168);
             this.btnDV.Name = "btnDV";
-            this.btnDV.Size = new System.Drawing.Size(202, 49);
+            this.btnDV.Size = new System.Drawing.Size(203, 49);
             this.btnDV.TabIndex = 0;
             this.btnDV.Text = "Quản lý dịch vụ";
             this.btnDV.UseVisualStyleBackColor = true;
@@ -132,7 +135,7 @@
             this.btnBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBaoCao.Location = new System.Drawing.Point(3, 223);
             this.btnBaoCao.Name = "btnBaoCao";
-            this.btnBaoCao.Size = new System.Drawing.Size(202, 49);
+            this.btnBaoCao.Size = new System.Drawing.Size(203, 49);
             this.btnBaoCao.TabIndex = 0;
             this.btnBaoCao.Text = "Báo cáo";
             this.btnBaoCao.UseVisualStyleBackColor = true;
@@ -143,7 +146,7 @@
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(3, 278);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(202, 52);
+            this.btnExit.Size = new System.Drawing.Size(203, 52);
             this.btnExit.TabIndex = 0;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -157,7 +160,7 @@
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(208, 221);
+            this.groupBox1.Size = new System.Drawing.Size(208, 201);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -194,16 +197,18 @@
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(208, 0);
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(209, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(682, 557);
+            this.panel2.Size = new System.Drawing.Size(745, 537);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(890, 557);
+            this.ClientSize = new System.Drawing.Size(954, 537);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
