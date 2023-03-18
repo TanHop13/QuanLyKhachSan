@@ -171,7 +171,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(7, 139);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 24);
+            this.label2.Size = new System.Drawing.Size(239, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Quản Lý Khách Sạn";
             // 
@@ -200,15 +200,15 @@
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(209, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(745, 537);
+            this.panel2.Size = new System.Drawing.Size(925, 537);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 537);
+            this.ClientSize = new System.Drawing.Size(1134, 537);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

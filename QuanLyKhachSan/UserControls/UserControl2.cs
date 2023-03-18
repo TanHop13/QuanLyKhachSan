@@ -7,14 +7,91 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace QuanLyKhachSan.UserControls
 {
     public partial class UserControl2 : UserControl
     {
+        SqlConnection connection;
+        SqlCommand command;
+        string str = @"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
+        SqlDataAdapter adapter = new SqlDataAdapter();
+        DataTable table = new DataTable();
+
+        void loadData()
+        {
+            command = connection.CreateCommand();
+            command.CommandText = "select * from NhanVien";
+            adapter.SelectCommand = command;
+            table.Clear(); ;
+            adapter.Fill(table);
+            dataGridView2.DataSource = table;
+        }
         public UserControl2()
         {
             InitializeComponent();
+        }
+
+        private void UserControl2_Load(object sender, EventArgs e)
+        {
+            connection = new SqlConnection(str);
+            connection.Open();
+            loadData();
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i;
+            i = dataGridView2.CurrentRow.Index;
+            txt6.Text = dataGridView2.Rows[i].Cells[0].Value.ToString();
+            txt7.Text = dataGridView2.Rows[i].Cells[1].Value.ToString();
+            txt8.Text = dataGridView2.Rows[i].Cells[2].Value.ToString();
+            txt9.Text = dataGridView2.Rows[i].Cells[3].Value.ToString();
+        }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            command = connection.CreateCommand();
+            command.CommandText = "insert into NhanVien values('" + txt6.Text + "', '" + txt7.Text + "', '" + txt8.Text + "', '" + txt9.Text + "')";
+            command.ExecuteNonQuery();
+            loadData();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            command = connection.CreateCommand();
+            command.CommandText = "update NhanVien set MaNV = '" + txt6.Text + "', TenNV = '" + txt7.Text + "', SDT = '" + txt8.Text + "', DiaChi = '" + txt9.Text + "' where MaNV = '" + txt6.Text + "'";
+            command.ExecuteNonQuery();
+            loadData();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            command = connection.CreateCommand();
+            command.CommandText = "delete from NhanVien where MaNV = '" + txt6.Text + "' ";
+            command.ExecuteNonQuery();
+            loadData();
+        }
+
+        private void btnKhoitao2_Click(object sender, EventArgs e)
+        {
+            txt6.Text = "";
+            txt7.Text = "";
+            txt8.Text = "";
+            txt9.Text = "";
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            command = connection.CreateCommand();
+            command.CommandText = "select * from NhanVien where MaNV = '"+txtSearch2.Text+"' ";
+            command.ExecuteNonQuery();
+            SqlDataReader reader = command.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+            dataGridView2.DataSource = dt;
         }
     }
 }
