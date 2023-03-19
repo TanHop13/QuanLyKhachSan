@@ -128,6 +128,7 @@
             this.btnDV.TabIndex = 0;
             this.btnDV.Text = "Quản lý dịch vụ";
             this.btnDV.UseVisualStyleBackColor = true;
+            this.btnDV.Click += new System.EventHandler(this.btnDV_Click);
             // 
             // btnBaoCao
             // 

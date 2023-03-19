@@ -26,7 +26,8 @@ namespace QuanLyKhachSan
             {
                 new UserControl1(),
                 new UserControl2(),
-                new UserControl3()
+                new UserControl3(),
+                new UserControl4()
             };
 
             navigationControl = new NavigationControl(userControls, panel2);
@@ -46,6 +47,11 @@ namespace QuanLyKhachSan
         private void btnP_Click(object sender, EventArgs e)
         {
             navigationControl.Display(2);
+        }
+
+        private void btnDV_Click(object sender, EventArgs e)
+        {
+            navigationControl.Display(3);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
