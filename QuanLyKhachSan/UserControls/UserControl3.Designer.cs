@@ -43,6 +43,8 @@
             this.lbLoaiPhong = new System.Windows.Forms.Label();
             this.lbTenPhong = new System.Windows.Forms.Label();
             this.lbID = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtLoai = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -119,25 +121,27 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnKhoitao3);
+            this.groupBox1.Controls.Add(this.txtLoai);
             this.groupBox1.Controls.Add(this.txt12);
             this.groupBox1.Controls.Add(this.txt11);
             this.groupBox1.Controls.Add(this.txt10);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lbGia);
             this.groupBox1.Controls.Add(this.lbLoaiPhong);
             this.groupBox1.Controls.Add(this.lbTenPhong);
             this.groupBox1.Controls.Add(this.lbID);
             this.groupBox1.Location = new System.Drawing.Point(0, 366);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(594, 126);
+            this.groupBox1.Size = new System.Drawing.Size(797, 126);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin phòng";
             // 
             // btnKhoitao3
             // 
-            this.btnKhoitao3.Location = new System.Drawing.Point(396, 71);
+            this.btnKhoitao3.Location = new System.Drawing.Point(633, 51);
             this.btnKhoitao3.Name = "btnKhoitao3";
-            this.btnKhoitao3.Size = new System.Drawing.Size(100, 23);
+            this.btnKhoitao3.Size = new System.Drawing.Size(112, 43);
             this.btnKhoitao3.TabIndex = 8;
             this.btnKhoitao3.Text = "Khởi tạo";
             this.btnKhoitao3.UseVisualStyleBackColor = true;
@@ -145,7 +149,7 @@
             // 
             // txt12
             // 
-            this.txt12.Location = new System.Drawing.Point(396, 28);
+            this.txt12.Location = new System.Drawing.Point(406, 31);
             this.txt12.Name = "txt12";
             this.txt12.Size = new System.Drawing.Size(100, 22);
             this.txt12.TabIndex = 6;
@@ -169,7 +173,7 @@
             this.lbGia.AutoSize = true;
             this.lbGia.Location = new System.Drawing.Point(283, 81);
             this.lbGia.Name = "lbGia";
-            this.lbGia.Size = new System.Drawing.Size(0, 16);
+            this.lbGia.Size = new System.Drawing.Size(0, 17);
             this.lbGia.TabIndex = 3;
             // 
             // lbLoaiPhong
@@ -177,7 +181,7 @@
             this.lbLoaiPhong.AutoSize = true;
             this.lbLoaiPhong.Location = new System.Drawing.Point(283, 34);
             this.lbLoaiPhong.Name = "lbLoaiPhong";
-            this.lbLoaiPhong.Size = new System.Drawing.Size(107, 16);
+            this.lbLoaiPhong.Size = new System.Drawing.Size(117, 17);
             this.lbLoaiPhong.TabIndex = 2;
             this.lbLoaiPhong.Text = "Tình trạng phòng";
             // 
@@ -186,7 +190,7 @@
             this.lbTenPhong.AutoSize = true;
             this.lbTenPhong.Location = new System.Drawing.Point(36, 81);
             this.lbTenPhong.Name = "lbTenPhong";
-            this.lbTenPhong.Size = new System.Drawing.Size(73, 16);
+            this.lbTenPhong.Size = new System.Drawing.Size(78, 17);
             this.lbTenPhong.TabIndex = 1;
             this.lbTenPhong.Text = "Tên Phòng";
             // 
@@ -195,9 +199,25 @@
             this.lbID.AutoSize = true;
             this.lbID.Location = new System.Drawing.Point(36, 34);
             this.lbID.Name = "lbID";
-            this.lbID.Size = new System.Drawing.Size(68, 16);
+            this.lbID.Size = new System.Drawing.Size(72, 17);
             this.lbID.TabIndex = 0;
             this.lbID.Text = "Mã Phòng";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(321, 77);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Loại phòng";
+            // 
+            // txtLoai
+            // 
+            this.txtLoai.Location = new System.Drawing.Point(406, 74);
+            this.txtLoai.Name = "txtLoai";
+            this.txtLoai.Size = new System.Drawing.Size(100, 22);
+            this.txtLoai.TabIndex = 6;
             // 
             // UserControl3
             // 
@@ -239,5 +259,7 @@
         private System.Windows.Forms.Label lbTenPhong;
         private System.Windows.Forms.Label lbID;
         private System.Windows.Forms.Button btnKhoitao3;
+        private System.Windows.Forms.TextBox txtLoai;
+        private System.Windows.Forms.Label label1;
     }
 }
