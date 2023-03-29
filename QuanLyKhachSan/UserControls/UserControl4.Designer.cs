@@ -101,7 +101,7 @@ namespace QuanLyKhachSan.UserControls
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(322, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 17);
+            this.label1.Size = new System.Drawing.Size(75, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Giá Dịch vụ";
             // 
@@ -110,7 +110,7 @@ namespace QuanLyKhachSan.UserControls
             this.lbGia.AutoSize = true;
             this.lbGia.Location = new System.Drawing.Point(283, 81);
             this.lbGia.Name = "lbGia";
-            this.lbGia.Size = new System.Drawing.Size(0, 17);
+            this.lbGia.Size = new System.Drawing.Size(0, 16);
             this.lbGia.TabIndex = 3;
             // 
             // lbTenPhong
@@ -118,7 +118,7 @@ namespace QuanLyKhachSan.UserControls
             this.lbTenPhong.AutoSize = true;
             this.lbTenPhong.Location = new System.Drawing.Point(36, 81);
             this.lbTenPhong.Name = "lbTenPhong";
-            this.lbTenPhong.Size = new System.Drawing.Size(84, 17);
+            this.lbTenPhong.Size = new System.Drawing.Size(78, 16);
             this.lbTenPhong.TabIndex = 1;
             this.lbTenPhong.Text = "Tên Dịch vụ";
             // 
@@ -127,7 +127,7 @@ namespace QuanLyKhachSan.UserControls
             this.lbID.AutoSize = true;
             this.lbID.Location = new System.Drawing.Point(36, 34);
             this.lbID.Name = "lbID";
-            this.lbID.Size = new System.Drawing.Size(78, 17);
+            this.lbID.Size = new System.Drawing.Size(73, 16);
             this.lbID.TabIndex = 0;
             this.lbID.Text = "Mã Dịch vụ";
             // 
@@ -190,6 +190,7 @@ namespace QuanLyKhachSan.UserControls
             // 
             // dataGridView4
             // 
+            this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Location = new System.Drawing.Point(0, 64);

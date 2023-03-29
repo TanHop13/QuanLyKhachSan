@@ -140,6 +140,7 @@
             this.btnBaoCao.TabIndex = 0;
             this.btnBaoCao.Text = "Báo cáo";
             this.btnBaoCao.UseVisualStyleBackColor = true;
+            this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
             // 
             // btnExit
             // 
@@ -203,7 +204,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(925, 537);
             this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // Home
             // 

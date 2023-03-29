@@ -15,7 +15,7 @@ namespace QuanLyKhachSan.UserControls
     {
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
+        string str = @"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
@@ -47,13 +47,13 @@ namespace QuanLyKhachSan.UserControls
             txt10.Text = dataGridView3.Rows[i].Cells[0].Value.ToString();
             txt11.Text = dataGridView3.Rows[i].Cells[1].Value.ToString();
             txtLoai.Text = dataGridView3.Rows[i].Cells[2].Value.ToString();
-            txt12.Text = dataGridView3.Rows[i].Cells[3].Value.ToString();
+            txt12.Checked = dataGridView3.Rows[i].Cells[3].Value.GetType().Equals(typeof(bool));
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "insert into Phong values('" + txt10.Text + "', '" + txt11.Text + "', '" + txtLoai.Text + "', '" + txt12.Text + "')";
+            command.CommandText = "insert into Phong values('" + txt10.Text + "', '" + txt11.Text + "', '" + txtLoai.Text + "', '" + txt12.Checked + "')";
             command.ExecuteNonQuery();
             loadData();
         }
@@ -61,7 +61,7 @@ namespace QuanLyKhachSan.UserControls
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "update Phong set MaP = '" + txt10.Text + "', TenP = '" + txt11.Text + "', TinhTrang = '" + txtLoai.Text + "', LoaiP = '" + txt12.Text + "' where MaP = '" + txt10.Text + "'";
+            command.CommandText = "update Phong set MaP = '" + txt10.Text + "', TenP = '" + txt11.Text + "', TinhTrang = '" + txt12.Checked + "', LoaiP = '" + txtLoai.Text + "' where MaP = '" + txt10.Text + "'";
             command.ExecuteNonQuery();
             loadData();
         }

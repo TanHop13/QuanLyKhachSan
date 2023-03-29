@@ -27,14 +27,20 @@ namespace QuanLyKhachSan
                 new UserControl1(),
                 new UserControl2(),
                 new UserControl3(),
-                new UserControl4()
+                new UserControl4(),
+                new UserControl5(),
             };
 
             navigationControl = new NavigationControl(userControls, panel2);
             navigationControl.Display(0);
+        void Home_Load(object sender, EventArgs e)
+        {
+
         }
 
-        private void btnKH_Click(object sender, EventArgs e)
+    }
+
+    private void btnKH_Click(object sender, EventArgs e)
         {
             navigationControl.Display(0);
         }
@@ -65,6 +71,11 @@ namespace QuanLyKhachSan
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnBaoCao_Click(object sender, EventArgs e)
+        {
+            navigationControl.Display(4);
         }
     }
 }

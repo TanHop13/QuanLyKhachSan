@@ -35,22 +35,23 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch3 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt12 = new System.Windows.Forms.CheckBox();
             this.btnKhoitao3 = new System.Windows.Forms.Button();
-            this.txt12 = new System.Windows.Forms.TextBox();
+            this.txtLoai = new System.Windows.Forms.TextBox();
             this.txt11 = new System.Windows.Forms.TextBox();
             this.txt10 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lbGia = new System.Windows.Forms.Label();
             this.lbLoaiPhong = new System.Windows.Forms.Label();
             this.lbTenPhong = new System.Windows.Forms.Label();
             this.lbID = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtLoai = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(0, 73);
@@ -120,9 +121,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt12);
             this.groupBox1.Controls.Add(this.btnKhoitao3);
             this.groupBox1.Controls.Add(this.txtLoai);
-            this.groupBox1.Controls.Add(this.txt12);
             this.groupBox1.Controls.Add(this.txt11);
             this.groupBox1.Controls.Add(this.txt10);
             this.groupBox1.Controls.Add(this.label1);
@@ -137,6 +138,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin phòng";
             // 
+            // txt12
+            // 
+            this.txt12.AutoSize = true;
+            this.txt12.Location = new System.Drawing.Point(406, 33);
+            this.txt12.Name = "txt12";
+            this.txt12.Size = new System.Drawing.Size(18, 17);
+            this.txt12.TabIndex = 9;
+            this.txt12.UseVisualStyleBackColor = true;
+            // 
             // btnKhoitao3
             // 
             this.btnKhoitao3.Location = new System.Drawing.Point(633, 51);
@@ -147,12 +157,12 @@
             this.btnKhoitao3.UseVisualStyleBackColor = true;
             this.btnKhoitao3.Click += new System.EventHandler(this.btnKhoitao3_Click);
             // 
-            // txt12
+            // txtLoai
             // 
-            this.txt12.Location = new System.Drawing.Point(406, 31);
-            this.txt12.Name = "txt12";
-            this.txt12.Size = new System.Drawing.Size(100, 22);
-            this.txt12.TabIndex = 6;
+            this.txtLoai.Location = new System.Drawing.Point(406, 74);
+            this.txtLoai.Name = "txtLoai";
+            this.txtLoai.Size = new System.Drawing.Size(100, 22);
+            this.txtLoai.TabIndex = 6;
             // 
             // txt11
             // 
@@ -168,12 +178,21 @@
             this.txt10.Size = new System.Drawing.Size(100, 22);
             this.txt10.TabIndex = 4;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(321, 77);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 16);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Loại phòng";
+            // 
             // lbGia
             // 
             this.lbGia.AutoSize = true;
             this.lbGia.Location = new System.Drawing.Point(283, 81);
             this.lbGia.Name = "lbGia";
-            this.lbGia.Size = new System.Drawing.Size(0, 17);
+            this.lbGia.Size = new System.Drawing.Size(0, 16);
             this.lbGia.TabIndex = 3;
             // 
             // lbLoaiPhong
@@ -181,7 +200,7 @@
             this.lbLoaiPhong.AutoSize = true;
             this.lbLoaiPhong.Location = new System.Drawing.Point(283, 34);
             this.lbLoaiPhong.Name = "lbLoaiPhong";
-            this.lbLoaiPhong.Size = new System.Drawing.Size(117, 17);
+            this.lbLoaiPhong.Size = new System.Drawing.Size(107, 16);
             this.lbLoaiPhong.TabIndex = 2;
             this.lbLoaiPhong.Text = "Tình trạng phòng";
             // 
@@ -190,7 +209,7 @@
             this.lbTenPhong.AutoSize = true;
             this.lbTenPhong.Location = new System.Drawing.Point(36, 81);
             this.lbTenPhong.Name = "lbTenPhong";
-            this.lbTenPhong.Size = new System.Drawing.Size(78, 17);
+            this.lbTenPhong.Size = new System.Drawing.Size(73, 16);
             this.lbTenPhong.TabIndex = 1;
             this.lbTenPhong.Text = "Tên Phòng";
             // 
@@ -199,25 +218,9 @@
             this.lbID.AutoSize = true;
             this.lbID.Location = new System.Drawing.Point(36, 34);
             this.lbID.Name = "lbID";
-            this.lbID.Size = new System.Drawing.Size(72, 17);
+            this.lbID.Size = new System.Drawing.Size(68, 16);
             this.lbID.TabIndex = 0;
             this.lbID.Text = "Mã Phòng";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(321, 77);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Loại phòng";
-            // 
-            // txtLoai
-            // 
-            this.txtLoai.Location = new System.Drawing.Point(406, 74);
-            this.txtLoai.Name = "txtLoai";
-            this.txtLoai.Size = new System.Drawing.Size(100, 22);
-            this.txtLoai.TabIndex = 6;
             // 
             // UserControl3
             // 
@@ -251,7 +254,6 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txt12;
         private System.Windows.Forms.TextBox txt11;
         private System.Windows.Forms.TextBox txt10;
         private System.Windows.Forms.Label lbGia;
@@ -261,5 +263,6 @@
         private System.Windows.Forms.Button btnKhoitao3;
         private System.Windows.Forms.TextBox txtLoai;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox txt12;
     }
 }
