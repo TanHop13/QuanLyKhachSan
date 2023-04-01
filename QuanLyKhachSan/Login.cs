@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace QuanLyKhachSan
 {
@@ -33,21 +34,22 @@ namespace QuanLyKhachSan
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if((txtUser.Text=="") || (txtPass.Text==""))
+            SqlConnection connection = new SqlConnection(@"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
+            string query = " select * from Admin where UserAdmin = '" + txtUser.Text + "' and PassWordAdmin = '" + txtPass.Text + "'";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+            DataTable dt = new DataTable(); 
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 1)
             {
-                MessageBox.Show("Vui lòng nhập thông tin!!", "Thông báo");
-            }
-            else if((txtUser.Text!="admin") || (txtPass.Text!="123"))
-            {
-                MessageBox.Show("Thông tin không chính xác!!!", "Thông báo");
+                Home home = new Home();
+                this.Hide();
+                home.ShowDialog();
             }
             else
             {
-                this.Hide();
-                Home f = new Home();
-                f.ShowDialog();
-                this.Close();
+                MessageBox.Show("Kiem tra UserAdmin va PassWordAdmin");
             }
+
         }
     }
 }

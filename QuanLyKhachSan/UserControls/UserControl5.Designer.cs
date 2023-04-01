@@ -30,7 +30,6 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.GbxHD = new System.Windows.Forms.GroupBox();
-            this.btnXuatHD = new System.Windows.Forms.Button();
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPhong = new System.Windows.Forms.TextBox();
@@ -42,6 +41,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtHD = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtNhanvien = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.GbxHD.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +62,8 @@
             // 
             // GbxHD
             // 
-            this.GbxHD.Controls.Add(this.btnXuatHD);
+            this.GbxHD.Controls.Add(this.txtNhanvien);
+            this.GbxHD.Controls.Add(this.label7);
             this.GbxHD.Controls.Add(this.txtMaHD);
             this.GbxHD.Controls.Add(this.label6);
             this.GbxHD.Controls.Add(this.txtPhong);
@@ -80,16 +82,6 @@
             this.GbxHD.TabStop = false;
             this.GbxHD.Text = "Thông tin hóa đơn";
             // 
-            // btnXuatHD
-            // 
-            this.btnXuatHD.Location = new System.Drawing.Point(553, 109);
-            this.btnXuatHD.Name = "btnXuatHD";
-            this.btnXuatHD.Size = new System.Drawing.Size(191, 23);
-            this.btnXuatHD.TabIndex = 11;
-            this.btnXuatHD.Text = "Xuất hóa đơn";
-            this.btnXuatHD.UseVisualStyleBackColor = true;
-            this.btnXuatHD.Click += new System.EventHandler(this.btnXuatHD_Click);
-            // 
             // txtMaHD
             // 
             this.txtMaHD.Location = new System.Drawing.Point(644, 66);
@@ -100,7 +92,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(550, 69);
+            this.label6.Location = new System.Drawing.Point(43, 66);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 16);
             this.label6.TabIndex = 9;
@@ -174,11 +166,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 72);
+            this.label1.Location = new System.Drawing.Point(526, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tổng hóa đơn";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(526, 109);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 16);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Nhân viên";
+            // 
+            // txtNhanvien
+            // 
+            this.txtNhanvien.Location = new System.Drawing.Point(644, 109);
+            this.txtNhanvien.Name = "txtNhanvien";
+            this.txtNhanvien.Size = new System.Drawing.Size(100, 22);
+            this.txtNhanvien.TabIndex = 12;
             // 
             // UserControl5
             // 
@@ -211,6 +219,7 @@
         private System.Windows.Forms.TextBox txtPhong;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnXuatHD;
+        private System.Windows.Forms.TextBox txtNhanvien;
+        private System.Windows.Forms.Label label7;
     }
 }

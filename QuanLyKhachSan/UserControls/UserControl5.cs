@@ -22,7 +22,7 @@ namespace QuanLyKhachSan.UserControls
         void loadData()
         {
             command = connection.CreateCommand();
-            command.CommandText = "select h.MaHD, k.TenKH, h.Phong,d.TenDV, h.Total from HoaDon h, DichVu d, KhachHang K where h.DichVu = d.MaDV and h.KH = k.MaKH";
+            command.CommandText = "select h.Total, k.TenKH,d.TenDV, p.TenP, h.MaHD, n.TenNV from ChiTietHoaDon c, HoaDon h, DichVu d, KhachHang k, NhanVien n, Phong p where c.IDHoaDon = h.MaHD and c.IdDichVu = d.MaDV and h.KH = k.MaKH and h.NV = n.MaNV and h.Phong = p.MaP\r\n";
             adapter.SelectCommand = command;
             table.Clear(); ;
             adapter.Fill(table);
@@ -47,9 +47,10 @@ namespace QuanLyKhachSan.UserControls
             i = dataGridView1.CurrentRow.Index;
             txtMaHD.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
             txtKH.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-            txtPhong.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
-            txtDV.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+            txtPhong.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+            txtDV.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
             txtHD.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();   
+            txtNhanvien.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
         }
 
         private void btnXuatHD_Click(object sender, EventArgs e)

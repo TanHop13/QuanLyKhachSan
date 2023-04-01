@@ -23,7 +23,7 @@ namespace QuanLyKhachSan
         void loadData()
         {
             command = connection.CreateCommand();
-            command.CommandText = "select n.TenNV, k.TenKH, c.NgayNhanPhong,c.NgayTraPhong, p.TenP, h.Total from HoaDon h, ChiTietHoaDon c, KhachHang k ,NhanVien n, Phong p where p.MaP = h.Phong and h.KH = k.MaKH and c.Phong = p.MaP and h.NV = n.MaNV";
+            command.CommandText = "select * from ChiTietHoaDon";
             adapter.SelectCommand = command;
             table.Clear(); ;
             adapter.Fill(table);
