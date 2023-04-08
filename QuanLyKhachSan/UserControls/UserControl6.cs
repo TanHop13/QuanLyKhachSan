@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace QuanLyKhachSan.UserControls
 {
-    public partial class UserControl5 : UserControl
+    public partial class UserControl6 : UserControl
     {
+        public static string name = string.Empty;
         SqlConnection connection;
         SqlCommand command;
         string str = @"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
@@ -22,36 +23,40 @@ namespace QuanLyKhachSan.UserControls
         void loadData()
         {
             command = connection.CreateCommand();
-            command.CommandText = "select h.Total, k.TenKH,d.TenDV, p.TenP, h.MaHD, n.TenNV from ChiTietHoaDon c, HoaDon h, DichVu d, KhachHang k, NhanVien n, Phong p where c.IDHoaDon = h.MaHD and c.IdDichVu = d.MaDV and h.KH = k.MaKH and h.NV = n.MaNV and h.Phong = p.MaP\r\n";
+            command.CommandText = "select * from Phong where TinhTrang = 0";
             adapter.SelectCommand = command;
             table.Clear(); ;
             adapter.Fill(table);
             dataGridView1.DataSource = table;
         }
-        public UserControl5()
+        public UserControl6()
         {
             InitializeComponent();
         }
 
-        private void UserControl5_Load(object sender, EventArgs e)
+        private void UserControl6_Load(object sender, EventArgs e)
         {
             connection = new SqlConnection(str);
-            connection.Open(); 
+            connection.Open();
             loadData();
         }
 
+        private void btnDatPhong_Click(object sender, EventArgs e)
+        {
+            command = connection.CreateCommand();
+            command.CommandText = "insert into HoaDonKhachHang values('" + txtId.Text + "', '" + txtPhong.Text + "', '" + txtLoai.Text + "', '" + dateTimePicker1.Text + "', '" + dateTimePicker2.Text + "', '"+txtMaP.Text+"', '"+name+"')";
+            command.ExecuteNonQuery();
+            loadData();
+            MessageBox.Show("Đặt phòng thành công!");
+        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i;
             i = dataGridView1.CurrentRow.Index;
-            txtMaHD.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
-            txtKH.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-            txtPhong.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
-            txtDV.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
-            txtHD.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();   
-            txtNhanvien.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
+            txtPhong.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+            txtLoai.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+            txtMaP.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
         }
-
     }
 }

@@ -22,7 +22,7 @@ namespace QuanLyKhachSan
         {
             SqlConnection connection = new SqlConnection(@"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
             connection.Open();
-            string query = " select * from Admin where UserAdmin = '" + txtUser.Text + "' and PassWordAdmin = '" + txtPassword.Text + "'";
+            string query = " select * from KhachHang where username = '" + txtUser.Text + "' and pass = '" + txtPassword.Text + "'";
             SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -36,9 +36,8 @@ namespace QuanLyKhachSan
             {
                 SqlCommand command;
                 command = connection.CreateCommand();
-                command.CommandText = "insert into Admin values ('" + txtId.Text + "', '" + txtUser.Text + "', '" + txtPassword.Text + "', '" + txtTên.Text + "', '" + ckBox1.Checked + "', '" + txtSĐT.Text + "')";
+                command.CommandText = "insert into KhachHang values ('" + txtId.Text + "', '" + txtTên.Text + "', '" + txtSĐT.Text + "', '" + txtĐC.Text + "', '" + txtUser.Text + "', '" + txtPassword.Text + "', '"+ckBox1.Checked+"')";
                 command.ExecuteNonQuery();
-                connection.Close();
                 MessageBox.Show("Đăng kí thành công");
             }
         }

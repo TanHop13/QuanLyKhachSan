@@ -30,6 +30,8 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.GbxHD = new System.Windows.Forms.GroupBox();
+            this.txtNhanvien = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPhong = new System.Windows.Forms.TextBox();
@@ -41,8 +43,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtHD = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtNhanvien = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.GbxHD.SuspendLayout();
             this.SuspendLayout();
@@ -81,6 +81,22 @@
             this.GbxHD.TabIndex = 1;
             this.GbxHD.TabStop = false;
             this.GbxHD.Text = "Thông tin hóa đơn";
+            // 
+            // txtNhanvien
+            // 
+            this.txtNhanvien.Location = new System.Drawing.Point(644, 109);
+            this.txtNhanvien.Name = "txtNhanvien";
+            this.txtNhanvien.Size = new System.Drawing.Size(100, 22);
+            this.txtNhanvien.TabIndex = 12;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(526, 109);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 16);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Nhân viên";
             // 
             // txtMaHD
             // 
@@ -171,22 +187,6 @@
             this.label1.Size = new System.Drawing.Size(91, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tổng hóa đơn";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(526, 109);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 16);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Nhân viên";
-            // 
-            // txtNhanvien
-            // 
-            this.txtNhanvien.Location = new System.Drawing.Point(644, 109);
-            this.txtNhanvien.Name = "txtNhanvien";
-            this.txtNhanvien.Size = new System.Drawing.Size(100, 22);
-            this.txtNhanvien.TabIndex = 12;
             // 
             // UserControl5
             // 

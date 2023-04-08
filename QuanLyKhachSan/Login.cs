@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using QuanLyKhachSan.UserControls;
 
 namespace QuanLyKhachSan
 {
@@ -39,15 +40,30 @@ namespace QuanLyKhachSan
             SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
             DataTable dt = new DataTable(); 
             adapter.Fill(dt);
-            if (dt.Rows.Count == 1)
+            SqlConnection connection2 = new SqlConnection(@"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
+            string query2 = " select * from KhachHang where username = '" + txtUser.Text + "' and pass = '" + txtPass.Text + "'";
+            SqlDataAdapter adapter2 = new SqlDataAdapter(query2, connection2);
+            DataTable dt2 = new DataTable();
+            adapter2.Fill(dt2);
+            if (dt.Rows.Count == 1 && dt2.Rows.Count == 0)
             {
                 Home home = new Home();
                 this.Hide();
                 home.ShowDialog();
             }
+            else if (dt2.Rows.Count == 1 && dt.Rows.Count == 0)
+            {
+                KhachHang khachHang = new KhachHang();
+                this.Hide();
+                KhachHang.name = txtUser.Text;
+                UserControl6.name = txtUser.Text;
+                UserControl7.name = txtUser.Text;
+                UserControl8.name = txtUser.Text;   
+                khachHang.ShowDialog();
+            }
             else
             {
-                MessageBox.Show("Kiem tra UserAdmin va PassWordAdmin");
+                MessageBox.Show("Vui long kiem tra lai tai khoan va mat khau!!!");
             }
 
         }
