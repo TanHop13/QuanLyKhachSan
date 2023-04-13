@@ -20,7 +20,7 @@ namespace QuanLyKhachSan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(@"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
+            SqlConnection connection = new SqlConnection(@"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
             connection.Open();
             string query = " select * from KhachHang where username = '" + txtUser.Text + "' and pass = '" + txtPassword.Text + "'";
             SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
@@ -30,15 +30,24 @@ namespace QuanLyKhachSan
                 MessageBox.Show("Vui lòng điền tài khoản và mật khẩu");
             if (dt.Rows.Count == 1)
             {
-                MessageBox.Show("Tài khoản đã đăng kí");
+                MessageBox.Show("Tài khoản đã tồn tại");
             }
             else
             {
                 SqlCommand command;
                 command = connection.CreateCommand();
-                command.CommandText = "insert into KhachHang values ('" + txtId.Text + "', '" + txtTên.Text + "', '" + txtSĐT.Text + "', '" + txtĐC.Text + "', '" + txtUser.Text + "', '" + txtPassword.Text + "', '"+ckBox1.Checked+"')";
+                command.CommandText = "insert into KhachHang values ('" + txtTên.Text + "', '" + txtSĐT.Text + "', '" + txtĐC.Text + "', '" + txtUser.Text + "', '" + txtPassword.Text + "', '"+ckBox1.Checked+"')";
                 command.ExecuteNonQuery();
                 MessageBox.Show("Đăng kí thành công");
+            }
+        }
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn muốn quay lại???", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Login logn = new Login();
+                this.Hide();
+                logn.ShowDialog();
             }
         }
     }

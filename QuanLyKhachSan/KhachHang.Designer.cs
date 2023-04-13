@@ -43,7 +43,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(53, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 16);
+            this.label1.Size = new System.Drawing.Size(63, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Xin chào";
             // 
@@ -55,7 +55,7 @@
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Khách sạn ABC";
             // 
             // btnThongTin
             // 
@@ -101,14 +101,14 @@
             // 
             this.panel1.Location = new System.Drawing.Point(209, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(754, 439);
+            this.panel1.Size = new System.Drawing.Size(739, 501);
             this.panel1.TabIndex = 7;
             // 
             // KhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 450);
+            this.ClientSize = new System.Drawing.Size(973, 520);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btndatPhong);

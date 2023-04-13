@@ -34,7 +34,7 @@ namespace QuanLyKhachSan
         }
         private void KhachHang_Load(object sender, EventArgs e)
         {
-            label1.Text = name;
+            label1.Text = label1.Text +" " + name +"!";
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -59,5 +59,7 @@ namespace QuanLyKhachSan
         {
             navigationControl.Display(2);
         }
+
+    
     }
 }
