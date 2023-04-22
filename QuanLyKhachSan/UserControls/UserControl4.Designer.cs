@@ -29,7 +29,6 @@ namespace QuanLyKhachSan.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnKhoitao4 = new System.Windows.Forms.Button();
             this.txt15 = new System.Windows.Forms.TextBox();
             this.txt14 = new System.Windows.Forms.TextBox();
@@ -44,54 +43,38 @@ namespace QuanLyKhachSan.UserControls
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch4 = new System.Windows.Forms.TextBox();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.groupBox1.SuspendLayout();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnKhoitao4);
-            this.groupBox1.Controls.Add(this.txt15);
-            this.groupBox1.Controls.Add(this.txt14);
-            this.groupBox1.Controls.Add(this.txt13);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.lbGia);
-            this.groupBox1.Controls.Add(this.lbTenPhong);
-            this.groupBox1.Controls.Add(this.lbID);
-            this.groupBox1.Location = new System.Drawing.Point(0, 357);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(594, 126);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin dịch vụ";
-            // 
             // btnKhoitao4
             // 
-            this.btnKhoitao4.Location = new System.Drawing.Point(428, 78);
+            this.btnKhoitao4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnKhoitao4.Location = new System.Drawing.Point(436, 39);
             this.btnKhoitao4.Name = "btnKhoitao4";
-            this.btnKhoitao4.Size = new System.Drawing.Size(100, 23);
+            this.btnKhoitao4.Size = new System.Drawing.Size(112, 31);
             this.btnKhoitao4.TabIndex = 8;
             this.btnKhoitao4.Text = "Khởi tạo";
-            this.btnKhoitao4.UseVisualStyleBackColor = true;
+            this.btnKhoitao4.UseVisualStyleBackColor = false;
             this.btnKhoitao4.Click += new System.EventHandler(this.btnKhoitao4_Click);
             // 
             // txt15
             // 
-            this.txt15.Location = new System.Drawing.Point(412, 34);
+            this.txt15.Location = new System.Drawing.Point(667, 206);
             this.txt15.Name = "txt15";
             this.txt15.Size = new System.Drawing.Size(157, 22);
             this.txt15.TabIndex = 5;
             // 
             // txt14
             // 
-            this.txt14.Location = new System.Drawing.Point(126, 81);
+            this.txt14.Location = new System.Drawing.Point(664, 151);
             this.txt14.Name = "txt14";
             this.txt14.Size = new System.Drawing.Size(157, 22);
             this.txt14.TabIndex = 5;
             // 
             // txt13
             // 
-            this.txt13.Location = new System.Drawing.Point(126, 34);
+            this.txt13.Location = new System.Drawing.Point(664, 104);
             this.txt13.Name = "txt13";
             this.txt13.Size = new System.Drawing.Size(157, 22);
             this.txt13.TabIndex = 4;
@@ -99,7 +82,7 @@ namespace QuanLyKhachSan.UserControls
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(322, 34);
+            this.label1.Location = new System.Drawing.Point(577, 206);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 16);
             this.label1.TabIndex = 1;
@@ -108,7 +91,7 @@ namespace QuanLyKhachSan.UserControls
             // lbGia
             // 
             this.lbGia.AutoSize = true;
-            this.lbGia.Location = new System.Drawing.Point(283, 81);
+            this.lbGia.Location = new System.Drawing.Point(821, 151);
             this.lbGia.Name = "lbGia";
             this.lbGia.Size = new System.Drawing.Size(0, 16);
             this.lbGia.TabIndex = 3;
@@ -116,7 +99,7 @@ namespace QuanLyKhachSan.UserControls
             // lbTenPhong
             // 
             this.lbTenPhong.AutoSize = true;
-            this.lbTenPhong.Location = new System.Drawing.Point(36, 81);
+            this.lbTenPhong.Location = new System.Drawing.Point(574, 151);
             this.lbTenPhong.Name = "lbTenPhong";
             this.lbTenPhong.Size = new System.Drawing.Size(78, 16);
             this.lbTenPhong.TabIndex = 1;
@@ -125,7 +108,7 @@ namespace QuanLyKhachSan.UserControls
             // lbID
             // 
             this.lbID.AutoSize = true;
-            this.lbID.Location = new System.Drawing.Point(36, 34);
+            this.lbID.Location = new System.Drawing.Point(574, 104);
             this.lbID.Name = "lbID";
             this.lbID.Size = new System.Drawing.Size(73, 16);
             this.lbID.TabIndex = 0;
@@ -133,59 +116,63 @@ namespace QuanLyKhachSan.UserControls
             // 
             // btnDelete
             // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(780, 9);
+            this.btnDelete.Location = new System.Drawing.Point(436, -1);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(100, 33);
+            this.btnDelete.Size = new System.Drawing.Size(112, 33);
             this.btnDelete.TabIndex = 16;
             this.btnDelete.Text = "Xoá";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(613, 9);
+            this.btnUpdate.Location = new System.Drawing.Point(282, 0);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 33);
             this.btnUpdate.TabIndex = 17;
             this.btnUpdate.Text = "Sửa";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnInsert
             // 
+            this.btnInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert.Location = new System.Drawing.Point(448, 9);
+            this.btnInsert.Location = new System.Drawing.Point(140, 0);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(100, 33);
             this.btnInsert.TabIndex = 18;
             this.btnInsert.Text = "Thêm";
-            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnSearch
             // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(279, 11);
+            this.btnSearch.Location = new System.Drawing.Point(0, 0);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(112, 32);
             this.btnSearch.TabIndex = 19;
             this.btnSearch.Text = "Tìm kiếm";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch4
             // 
             this.txtSearch4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch4.Location = new System.Drawing.Point(21, 11);
+            this.txtSearch4.Location = new System.Drawing.Point(0, 31);
             this.txtSearch4.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch4.Name = "txtSearch4";
-            this.txtSearch4.Size = new System.Drawing.Size(216, 30);
+            this.txtSearch4.Size = new System.Drawing.Size(112, 30);
             this.txtSearch4.TabIndex = 15;
             // 
             // dataGridView4
@@ -193,30 +180,47 @@ namespace QuanLyKhachSan.UserControls
             this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(0, 64);
+            this.dataGridView4.Location = new System.Drawing.Point(0, 69);
             this.dataGridView4.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.Size = new System.Drawing.Size(933, 292);
+            this.dataGridView4.Size = new System.Drawing.Size(548, 423);
             this.dataGridView4.TabIndex = 14;
             this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(636, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(185, 29);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Quản lí dịch vụ";
             // 
             // UserControl4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnKhoitao4);
+            this.Controls.Add(this.txt15);
             this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txt14);
             this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.txt13);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.lbGia);
             this.Controls.Add(this.txtSearch4);
+            this.Controls.Add(this.lbTenPhong);
             this.Controls.Add(this.dataGridView4);
+            this.Controls.Add(this.lbID);
             this.Name = "UserControl4";
             this.Size = new System.Drawing.Size(933, 492);
             this.Load += new System.EventHandler(this.UserControl4_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -224,8 +228,6 @@ namespace QuanLyKhachSan.UserControls
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnKhoitao4;
         private System.Windows.Forms.TextBox txt14;
         private System.Windows.Forms.TextBox txt13;
@@ -240,5 +242,6 @@ namespace QuanLyKhachSan.UserControls
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.TextBox txt15;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
