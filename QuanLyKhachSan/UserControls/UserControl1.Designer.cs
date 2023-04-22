@@ -54,11 +54,11 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 52);
+            this.dataGridView1.Location = new System.Drawing.Point(227, 52);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(985, 375);
+            this.dataGridView1.Size = new System.Drawing.Size(360, 476);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -130,9 +130,9 @@
             this.groupBox1.Controls.Add(this.lbSDT);
             this.groupBox1.Controls.Add(this.lbTen);
             this.groupBox1.Controls.Add(this.lbMa);
-            this.groupBox1.Location = new System.Drawing.Point(3, 434);
+            this.groupBox1.Location = new System.Drawing.Point(594, 68);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(986, 141);
+            this.groupBox1.Size = new System.Drawing.Size(360, 460);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khách hàng";
@@ -149,14 +149,14 @@
             // 
             // txt5
             // 
-            this.txt5.Location = new System.Drawing.Point(576, 84);
+            this.txt5.Location = new System.Drawing.Point(188, 282);
             this.txt5.Name = "txt5";
             this.txt5.Size = new System.Drawing.Size(163, 22);
             this.txt5.TabIndex = 7;
             // 
             // txt4
             // 
-            this.txt4.Location = new System.Drawing.Point(576, 30);
+            this.txt4.Location = new System.Drawing.Point(189, 211);
             this.txt4.Name = "txt4";
             this.txt4.Size = new System.Drawing.Size(163, 22);
             this.txt4.TabIndex = 6;
@@ -178,18 +178,18 @@
             // lbDiachi
             // 
             this.lbDiachi.AutoSize = true;
-            this.lbDiachi.Location = new System.Drawing.Point(470, 87);
+            this.lbDiachi.Location = new System.Drawing.Point(47, 287);
             this.lbDiachi.Name = "lbDiachi";
-            this.lbDiachi.Size = new System.Drawing.Size(47, 16);
+            this.lbDiachi.Size = new System.Drawing.Size(51, 17);
             this.lbDiachi.TabIndex = 3;
             this.lbDiachi.Text = "Địa chỉ";
             // 
             // lbSDT
             // 
             this.lbSDT.AutoSize = true;
-            this.lbSDT.Location = new System.Drawing.Point(470, 33);
+            this.lbSDT.Location = new System.Drawing.Point(47, 216);
             this.lbSDT.Name = "lbSDT";
-            this.lbSDT.Size = new System.Drawing.Size(85, 16);
+            this.lbSDT.Size = new System.Drawing.Size(91, 17);
             this.lbSDT.TabIndex = 2;
             this.lbSDT.Text = "Số điện thoại";
             // 
@@ -198,7 +198,7 @@
             this.lbTen.AutoSize = true;
             this.lbTen.Location = new System.Drawing.Point(47, 87);
             this.lbTen.Name = "lbTen";
-            this.lbTen.Size = new System.Drawing.Size(103, 16);
+            this.lbTen.Size = new System.Drawing.Size(111, 17);
             this.lbTen.TabIndex = 1;
             this.lbTen.Text = "Tên khách hàng";
             // 
@@ -207,7 +207,7 @@
             this.lbMa.AutoSize = true;
             this.lbMa.Location = new System.Drawing.Point(47, 33);
             this.lbMa.Name = "lbMa";
-            this.lbMa.Size = new System.Drawing.Size(98, 16);
+            this.lbMa.Size = new System.Drawing.Size(105, 17);
             this.lbMa.TabIndex = 0;
             this.lbMa.Text = "Mã khách hàng";
             // 
@@ -224,7 +224,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(993, 661);
+            this.Size = new System.Drawing.Size(993, 585);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using QuanLyKhachSan.UserControls;
+using System.Web;
 
 namespace QuanLyKhachSan
 {
@@ -35,12 +36,15 @@ namespace QuanLyKhachSan
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(@"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
+            //string password = txtPass.Text;
+            //string passwordHash = " select pass from KhachHang where username = '" + txtUser.Text + "'";
+            //bool verify = BCrypt.Net.BCrypt.Verify("password", passwordHash);
+            SqlConnection connection = new SqlConnection(@"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
             string query = " select * from Admin where UserAdmin = '" + txtUser.Text + "' and PassWordAdmin = '" + txtPass.Text + "'";
             SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
             DataTable dt = new DataTable(); 
             adapter.Fill(dt);
-            SqlConnection connection2 = new SqlConnection(@"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
+            SqlConnection connection2 = new SqlConnection(@"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
             string query2 = " select * from KhachHang where username = '" + txtUser.Text + "' and pass = '" + txtPass.Text + "'";
             SqlDataAdapter adapter2 = new SqlDataAdapter(query2, connection2);
             DataTable dt2 = new DataTable();
@@ -71,8 +75,8 @@ namespace QuanLyKhachSan
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             SignUp signUp = new SignUp();
-            signUp.ShowDialog();
             this.Hide();
+            signUp.ShowDialog();
         }
     }
 }

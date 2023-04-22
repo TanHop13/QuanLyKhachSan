@@ -50,17 +50,18 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.GreenYellow;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(90)))));
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(209, 537);
+            this.panel1.Size = new System.Drawing.Size(214, 537);
             this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(90)))));
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.btnKH, 0, 0);
@@ -79,84 +80,90 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(209, 333);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(214, 333);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // btnKH
             // 
-            this.btnKH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnKH.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnKH.BackColor = System.Drawing.Color.White;
             this.btnKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKH.Location = new System.Drawing.Point(3, 3);
+            this.btnKH.Location = new System.Drawing.Point(5, 3);
             this.btnKH.Name = "btnKH";
             this.btnKH.Size = new System.Drawing.Size(203, 49);
             this.btnKH.TabIndex = 0;
             this.btnKH.Text = "Quản lý khách hàng";
-            this.btnKH.UseVisualStyleBackColor = true;
+            this.btnKH.UseVisualStyleBackColor = false;
             this.btnKH.Click += new System.EventHandler(this.btnKH_Click);
             // 
             // btnNV
             // 
+            this.btnNV.BackColor = System.Drawing.Color.White;
             this.btnNV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNV.Location = new System.Drawing.Point(3, 58);
             this.btnNV.Name = "btnNV";
-            this.btnNV.Size = new System.Drawing.Size(203, 49);
+            this.btnNV.Size = new System.Drawing.Size(208, 49);
             this.btnNV.TabIndex = 0;
             this.btnNV.Text = "Quản lý nhân viên";
-            this.btnNV.UseVisualStyleBackColor = true;
+            this.btnNV.UseVisualStyleBackColor = false;
             this.btnNV.Click += new System.EventHandler(this.btnNV_Click);
             // 
             // btnP
             // 
+            this.btnP.BackColor = System.Drawing.Color.White;
             this.btnP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnP.Location = new System.Drawing.Point(3, 113);
             this.btnP.Name = "btnP";
-            this.btnP.Size = new System.Drawing.Size(203, 49);
+            this.btnP.Size = new System.Drawing.Size(208, 49);
             this.btnP.TabIndex = 0;
             this.btnP.Text = "Quản lý phòng";
-            this.btnP.UseVisualStyleBackColor = true;
+            this.btnP.UseVisualStyleBackColor = false;
             this.btnP.Click += new System.EventHandler(this.btnP_Click);
             // 
             // btnDV
             // 
+            this.btnDV.BackColor = System.Drawing.Color.White;
             this.btnDV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDV.Location = new System.Drawing.Point(3, 168);
             this.btnDV.Name = "btnDV";
-            this.btnDV.Size = new System.Drawing.Size(203, 49);
+            this.btnDV.Size = new System.Drawing.Size(208, 49);
             this.btnDV.TabIndex = 0;
             this.btnDV.Text = "Quản lý dịch vụ";
-            this.btnDV.UseVisualStyleBackColor = true;
+            this.btnDV.UseVisualStyleBackColor = false;
             this.btnDV.Click += new System.EventHandler(this.btnDV_Click);
             // 
             // btnBaoCao
             // 
+            this.btnBaoCao.BackColor = System.Drawing.Color.White;
             this.btnBaoCao.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBaoCao.Location = new System.Drawing.Point(3, 223);
             this.btnBaoCao.Name = "btnBaoCao";
-            this.btnBaoCao.Size = new System.Drawing.Size(203, 49);
+            this.btnBaoCao.Size = new System.Drawing.Size(208, 49);
             this.btnBaoCao.TabIndex = 0;
             this.btnBaoCao.Text = "Báo cáo";
-            this.btnBaoCao.UseVisualStyleBackColor = true;
+            this.btnBaoCao.UseVisualStyleBackColor = false;
             this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
             // 
             // btnExit
             // 
+            this.btnExit.BackColor = System.Drawing.Color.White;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(3, 278);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(203, 52);
+            this.btnExit.Size = new System.Drawing.Size(208, 52);
             this.btnExit.TabIndex = 0;
             this.btnExit.Text = "Thoát";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(90)))));
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.pictureBox1);
@@ -169,16 +176,18 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(-5, 139);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(0, 136);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(239, 29);
+            this.label2.Size = new System.Drawing.Size(208, 65);
             this.label2.TabIndex = 1;
             this.label2.Text = "Quản Lý Khách Sạn";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 106);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(174, 33);
@@ -189,9 +198,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(196, 90);
+            this.pictureBox1.Size = new System.Drawing.Size(214, 93);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -200,9 +209,9 @@
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(209, 0);
+            this.panel2.Location = new System.Drawing.Point(214, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(925, 537);
+            this.panel2.Size = new System.Drawing.Size(920, 537);
             this.panel2.TabIndex = 2;
             // 
             // Home
@@ -223,7 +232,6 @@
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

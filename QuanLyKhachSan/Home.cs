@@ -77,5 +77,7 @@ namespace QuanLyKhachSan
         {
             navigationControl.Display(4);
         }
+
+        
     }
 }

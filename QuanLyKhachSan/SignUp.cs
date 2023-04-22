@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Web;
 
 namespace QuanLyKhachSan
 {
@@ -34,6 +35,8 @@ namespace QuanLyKhachSan
             }
             else
             {
+                //String password = txtPassword.Text;
+                //String passwordHash = BCrypt.Net.BCrypt.HashPassword("password");
                 SqlCommand command;
                 command = connection.CreateCommand();
                 command.CommandText = "insert into KhachHang values ('" + txtTên.Text + "', '" + txtSĐT.Text + "', '" + txtĐC.Text + "', '" + txtUser.Text + "', '" + txtPassword.Text + "', '"+ckBox1.Checked+"')";
