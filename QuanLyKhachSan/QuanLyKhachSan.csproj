@@ -127,11 +127,11 @@
     <Compile Include="UserControls\KHInfo.Designer.cs">
       <DependentUpon>KHInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControl8.cs">
+    <Compile Include="UserControls\LichSuDP.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControl8.Designer.cs">
-      <DependentUpon>UserControl8.cs</DependentUpon>
+    <Compile Include="UserControls\LichSuDP.Designer.cs">
+      <DependentUpon>LichSuDP.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ChiTietHoaDon.resx">
       <DependentUpon>ChiTietHoaDon.cs</DependentUpon>
@@ -178,8 +178,8 @@
     <EmbeddedResource Include="UserControls\KHInfo.resx">
       <DependentUpon>KHInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControl8.resx">
-      <DependentUpon>UserControl8.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\LichSuDP.resx">
+      <DependentUpon>LichSuDP.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
