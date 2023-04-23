@@ -39,12 +39,12 @@ namespace QuanLyKhachSan
             //string password = txtPass.Text;
             //string passwordHash = " select pass from KhachHang where username = '" + txtUser.Text + "'";
             //bool verify = BCrypt.Net.BCrypt.Verify("password", passwordHash);
-            SqlConnection connection = new SqlConnection(@"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
+            SqlConnection connection = new SqlConnection(@"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
             string query = " select * from Admin where UserAdmin = '" + txtUser.Text + "' and PassWordAdmin = '" + txtPass.Text + "'";
             SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
             DataTable dt = new DataTable(); 
             adapter.Fill(dt);
-            SqlConnection connection2 = new SqlConnection(@"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
+            SqlConnection connection2 = new SqlConnection(@"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
             string query2 = " select * from KhachHang where username = '" + txtUser.Text + "' and pass = '" + txtPass.Text + "'";
             SqlDataAdapter adapter2 = new SqlDataAdapter(query2, connection2);
             DataTable dt2 = new DataTable();
@@ -60,9 +60,9 @@ namespace QuanLyKhachSan
                 KhachHang khachHang = new KhachHang();
                 this.Hide();
                 KhachHang.name = txtUser.Text;
-                UserControl6.name = txtUser.Text;
-                UserControl7.name = txtUser.Text;
-                UserControl8.name = txtUser.Text;   
+                DatPhong.name = txtUser.Text;
+                KHInfo.name = txtUser.Text;
+                LichSuDP.name = txtUser.Text;   
                 khachHang.ShowDialog();
             }
             else

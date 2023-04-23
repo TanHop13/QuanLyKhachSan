@@ -28,7 +28,7 @@ namespace QuanLyKhachSan
                 new UserControl2(),
                 new UserControl3(),
                 new UserControl4(),
-                new UserControl5(),
+                new QLBaoCao(),
             };
 
             navigationControl = new NavigationControl(userControls, panel2);

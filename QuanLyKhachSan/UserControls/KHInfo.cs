@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan.UserControls
 {
-    public partial class UserControl7 : UserControl
+    public partial class KHInfo : UserControl
     {
         public static string name = string.Empty;
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
+        string str = @"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
         SqlDataReader dr;
         private void Load_Data()
         {
@@ -36,11 +36,10 @@ namespace QuanLyKhachSan.UserControls
             }
             else
             {
-                MessageBox.Show("Khong");
+                MessageBox.Show("Không có thông tin");
             }
-
         }
-        public UserControl7()
+        public KHInfo()
         {
             InitializeComponent();
         }
@@ -50,7 +49,6 @@ namespace QuanLyKhachSan.UserControls
             connection = new SqlConnection(str);
             connection.Open();
             Load_Data();
-
         }
     }
 }

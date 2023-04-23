@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan.UserControls
 {
-    public partial class UserControl6 : UserControl
+    public partial class DatPhong : UserControl
     {
         public static string name = string.Empty;
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
+        string str = @"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
@@ -29,7 +29,7 @@ namespace QuanLyKhachSan.UserControls
             adapter.Fill(table);
             dataGridView1.DataSource = table;
         }
-        public UserControl6()
+        public DatPhong()
         {
             InitializeComponent();
         }

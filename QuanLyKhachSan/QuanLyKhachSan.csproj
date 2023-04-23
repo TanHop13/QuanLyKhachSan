@@ -109,23 +109,23 @@
     <Compile Include="UserControls\UserControl4.Designer.cs">
       <DependentUpon>UserControl4.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControl5.cs">
+    <Compile Include="UserControls\QLBaoCao.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControl5.Designer.cs">
-      <DependentUpon>UserControl5.cs</DependentUpon>
+    <Compile Include="UserControls\QLBaoCao.Designer.cs">
+      <DependentUpon>QLBaoCao.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControl6.cs">
+    <Compile Include="UserControls\DatPhong.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControl6.Designer.cs">
-      <DependentUpon>UserControl6.cs</DependentUpon>
+    <Compile Include="UserControls\DatPhong.Designer.cs">
+      <DependentUpon>DatPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControl7.cs">
+    <Compile Include="UserControls\KHInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControl7.Designer.cs">
-      <DependentUpon>UserControl7.cs</DependentUpon>
+    <Compile Include="UserControls\KHInfo.Designer.cs">
+      <DependentUpon>KHInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControl8.cs">
       <SubType>UserControl</SubType>
@@ -169,14 +169,14 @@
     <EmbeddedResource Include="UserControls\UserControl4.resx">
       <DependentUpon>UserControl4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControl5.resx">
-      <DependentUpon>UserControl5.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\QLBaoCao.resx">
+      <DependentUpon>QLBaoCao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControl6.resx">
-      <DependentUpon>UserControl6.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\DatPhong.resx">
+      <DependentUpon>DatPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControl7.resx">
-      <DependentUpon>UserControl7.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\KHInfo.resx">
+      <DependentUpon>KHInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl8.resx">
       <DependentUpon>UserControl8.cs</DependentUpon>

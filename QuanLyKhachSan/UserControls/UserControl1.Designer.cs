@@ -124,7 +124,7 @@
             // txt5
             // 
             this.txt5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt5.Location = new System.Drawing.Point(784, 312);
+            this.txt5.Location = new System.Drawing.Point(759, 313);
             this.txt5.Name = "txt5";
             this.txt5.Size = new System.Drawing.Size(163, 22);
             this.txt5.TabIndex = 7;
@@ -132,7 +132,7 @@
             // txt4
             // 
             this.txt4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt4.Location = new System.Drawing.Point(784, 239);
+            this.txt4.Location = new System.Drawing.Point(759, 240);
             this.txt4.Name = "txt4";
             this.txt4.Size = new System.Drawing.Size(163, 22);
             this.txt4.TabIndex = 6;
@@ -140,7 +140,7 @@
             // txt3
             // 
             this.txt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt3.Location = new System.Drawing.Point(784, 167);
+            this.txt3.Location = new System.Drawing.Point(759, 168);
             this.txt3.Name = "txt3";
             this.txt3.Size = new System.Drawing.Size(164, 22);
             this.txt3.TabIndex = 5;
@@ -148,7 +148,7 @@
             // txt2
             // 
             this.txt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt2.Location = new System.Drawing.Point(784, 109);
+            this.txt2.Location = new System.Drawing.Point(759, 110);
             this.txt2.Name = "txt2";
             this.txt2.Size = new System.Drawing.Size(164, 22);
             this.txt2.TabIndex = 4;
@@ -159,7 +159,7 @@
             this.lbDiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDiachi.Location = new System.Drawing.Point(618, 318);
             this.lbDiachi.Name = "lbDiachi";
-            this.lbDiachi.Size = new System.Drawing.Size(47, 16);
+            this.lbDiachi.Size = new System.Drawing.Size(51, 17);
             this.lbDiachi.TabIndex = 3;
             this.lbDiachi.Text = "Địa chỉ";
             // 
@@ -169,7 +169,7 @@
             this.lbSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSDT.Location = new System.Drawing.Point(618, 245);
             this.lbSDT.Name = "lbSDT";
-            this.lbSDT.Size = new System.Drawing.Size(85, 16);
+            this.lbSDT.Size = new System.Drawing.Size(91, 17);
             this.lbSDT.TabIndex = 2;
             this.lbSDT.Text = "Số điện thoại";
             // 
@@ -179,7 +179,7 @@
             this.lbTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTen.Location = new System.Drawing.Point(618, 173);
             this.lbTen.Name = "lbTen";
-            this.lbTen.Size = new System.Drawing.Size(103, 16);
+            this.lbTen.Size = new System.Drawing.Size(111, 17);
             this.lbTen.TabIndex = 1;
             this.lbTen.Text = "Tên khách hàng";
             // 
@@ -189,7 +189,7 @@
             this.lbMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMa.Location = new System.Drawing.Point(618, 115);
             this.lbMa.Name = "lbMa";
-            this.lbMa.Size = new System.Drawing.Size(98, 16);
+            this.lbMa.Size = new System.Drawing.Size(105, 17);
             this.lbMa.TabIndex = 0;
             this.lbMa.Text = "Mã khách hàng";
             // 

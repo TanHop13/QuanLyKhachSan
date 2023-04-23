@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,10 @@ namespace QuanLyKhachSan
     public partial class KhachHang : Form
     {
         public static string name = string.Empty;
+        SqlConnection connection;
+        SqlCommand command;
+        string str = @"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
+        SqlDataReader dr;
         NavigationControl navigationControl;
         public KhachHang()
         {
@@ -24,9 +29,9 @@ namespace QuanLyKhachSan
         {
             List<UserControl> userControls = new List<UserControl>()
             {
-                new UserControl6(),
-                new UserControl7(),
-                new UserControl8(),
+                new DatPhong(),
+                new KHInfo(),
+                new LichSuDP(),
             };
 
             navigationControl = new NavigationControl(userControls, panel1);
@@ -34,7 +39,9 @@ namespace QuanLyKhachSan
         }
         private void KhachHang_Load(object sender, EventArgs e)
         {
-            label1.Text = label1.Text +" " + name +"!";
+            connection = new SqlConnection(str);
+            connection.Open();
+            HienThiTenKH(name);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -60,6 +67,28 @@ namespace QuanLyKhachSan
             navigationControl.Display(2);
         }
 
-    
+        private void HienThiTenKH(string name)
+        {
+            command = connection.CreateCommand();
+            command.CommandText = "select tenKH from KhachHang where username like  '" + name + "'";
+            dr = command.ExecuteReader();
+            if (dr.Read())
+            {
+                string tenKH = dr.GetString(0);
+                label1.Text = label1.Text + " " + tenKH + "!";
+            }
+            else
+            {
+                MessageBox.Show("Không có thông tin");
+            }
+        }
+
+        private void KhachHang_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát???", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

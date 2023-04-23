@@ -11,11 +11,11 @@ using System.Data.SqlClient;
 
 namespace QuanLyKhachSan.UserControls
 {
-    public partial class UserControl5 : UserControl
+    public partial class QLBaoCao : UserControl
     {
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
+        string str = @"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
@@ -28,7 +28,7 @@ namespace QuanLyKhachSan.UserControls
             adapter.Fill(table);
             dataGridView1.DataSource = table;
         }
-        public UserControl5()
+        public QLBaoCao()
         {
             InitializeComponent();
         }
