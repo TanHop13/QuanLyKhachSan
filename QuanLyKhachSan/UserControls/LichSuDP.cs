@@ -16,14 +16,14 @@ namespace QuanLyKhachSan.UserControls
         public static string name = string.Empty;
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
+        string str = @"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
         void loadData()
         {
             command = connection.CreateCommand();
-            command.CommandText = "select * from HoaDonKhachHang where TenKH like '"+name+"' ";
+            command.CommandText = "select  k.username, p.TenP, h.NgayNhanPhong, h.NgayTraPhong, h.Total from HoaDon h, KhachHang k, Phong p where h.KH = k.MaKH and h.Phong = p.MaP and k.username = '" + name + "'";
             adapter.SelectCommand = command;
             table.Clear(); ;
             adapter.Fill(table);

@@ -17,7 +17,7 @@ namespace QuanLyKhachSan
         public static string name = string.Empty;
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
+        string str = @"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
         SqlDataReader dr;
         NavigationControl navigationControl;
         public KhachHang()

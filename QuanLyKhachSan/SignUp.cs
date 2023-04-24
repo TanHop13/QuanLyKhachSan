@@ -21,7 +21,7 @@ namespace QuanLyKhachSan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(@"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
+            SqlConnection connection = new SqlConnection(@"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
             connection.Open();
             string query = " select * from KhachHang where username = '" + txtUser.Text + "' and pass = '" + txtPassword.Text + "'";
             SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
@@ -39,7 +39,7 @@ namespace QuanLyKhachSan
                 //String passwordHash = BCrypt.Net.BCrypt.HashPassword("password");
                 SqlCommand command;
                 command = connection.CreateCommand();
-                command.CommandText = "insert into KhachHang values ('" + txtTên.Text + "', '" + txtSĐT.Text + "', '" + txtĐC.Text + "', '" + txtUser.Text + "', '" + txtPassword.Text + "', '"+ckBox1.Checked+"')";
+                command.CommandText = "insert into KhachHang values ('" + txtTên.Text + "', '" + txtSĐT.Text + "', '" + txtĐC.Text + "', '" + txtUser.Text + "', '" + txtPassword.Text + "')";
                 command.ExecuteNonQuery();
                 MessageBox.Show("Đăng kí thành công");
             }
