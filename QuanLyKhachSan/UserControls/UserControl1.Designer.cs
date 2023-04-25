@@ -43,6 +43,10 @@
             this.lbTen = new System.Windows.Forms.Label();
             this.lbMa = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt6 = new System.Windows.Forms.TextBox();
+            this.txt7 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,7 +163,7 @@
             this.lbDiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDiachi.Location = new System.Drawing.Point(618, 318);
             this.lbDiachi.Name = "lbDiachi";
-            this.lbDiachi.Size = new System.Drawing.Size(51, 17);
+            this.lbDiachi.Size = new System.Drawing.Size(47, 16);
             this.lbDiachi.TabIndex = 3;
             this.lbDiachi.Text = "Địa chỉ";
             // 
@@ -169,7 +173,7 @@
             this.lbSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSDT.Location = new System.Drawing.Point(618, 245);
             this.lbSDT.Name = "lbSDT";
-            this.lbSDT.Size = new System.Drawing.Size(91, 17);
+            this.lbSDT.Size = new System.Drawing.Size(85, 16);
             this.lbSDT.TabIndex = 2;
             this.lbSDT.Text = "Số điện thoại";
             // 
@@ -179,7 +183,7 @@
             this.lbTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTen.Location = new System.Drawing.Point(618, 173);
             this.lbTen.Name = "lbTen";
-            this.lbTen.Size = new System.Drawing.Size(111, 17);
+            this.lbTen.Size = new System.Drawing.Size(103, 16);
             this.lbTen.TabIndex = 1;
             this.lbTen.Text = "Tên khách hàng";
             // 
@@ -189,7 +193,7 @@
             this.lbMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMa.Location = new System.Drawing.Point(618, 115);
             this.lbMa.Name = "lbMa";
-            this.lbMa.Size = new System.Drawing.Size(105, 17);
+            this.lbMa.Size = new System.Drawing.Size(98, 16);
             this.lbMa.TabIndex = 0;
             this.lbMa.Text = "Mã khách hàng";
             // 
@@ -203,11 +207,49 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Quản lí khách hàng";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(621, 381);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 16);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Username";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(621, 424);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 16);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "PassWord";
+            // 
+            // txt6
+            // 
+            this.txt6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt6.Location = new System.Drawing.Point(759, 375);
+            this.txt6.Name = "txt6";
+            this.txt6.Size = new System.Drawing.Size(163, 22);
+            this.txt6.TabIndex = 11;
+            // 
+            // txt7
+            // 
+            this.txt7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt7.Location = new System.Drawing.Point(759, 421);
+            this.txt7.Name = "txt7";
+            this.txt7.Size = new System.Drawing.Size(163, 22);
+            this.txt7.TabIndex = 12;
+            // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.Controls.Add(this.txt7);
+            this.Controls.Add(this.txt6);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt5);
             this.Controls.Add(this.btnDelete);
@@ -250,5 +292,9 @@
         private System.Windows.Forms.TextBox txt3;
         private System.Windows.Forms.TextBox txt2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt6;
+        private System.Windows.Forms.TextBox txt7;
     }
 }

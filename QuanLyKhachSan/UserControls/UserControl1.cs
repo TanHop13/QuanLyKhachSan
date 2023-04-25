@@ -15,7 +15,7 @@ namespace QuanLyKhachSan.UserControls
     {
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
+        string str = @"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
@@ -48,14 +48,17 @@ namespace QuanLyKhachSan.UserControls
             txt3.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
             txt4.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
             txt5.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+            txt6.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+            txt7.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "insert into KhachHang values('" + txt2.Text + "', '" + txt3.Text + "', '" + txt4.Text + "', '" + txt5.Text + "')";
+            command.CommandText = "insert into KhachHang values( '" + txt3.Text + "', '" + txt4.Text + "', '" + txt5.Text + "', '" + txt6.Text + "', '" + txt7.Text + "')";
             command.ExecuteNonQuery();
             loadData();
+            MessageBox.Show("Thêm thông tin khách hàng thành công");
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -64,14 +67,16 @@ namespace QuanLyKhachSan.UserControls
             command.CommandText = "delete from KhachHang where MaKH = '" + txt2.Text + "' ";
             command.ExecuteNonQuery();
             loadData();
+            MessageBox.Show("Xóa thông tin khách hàng thành công");
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "update KhachHang set MaKH = '"+txt2.Text+"', TenKH = '"+txt3.Text+"', SDT = '"+txt4.Text+"', DiaChi = '"+txt5.Text+"' where MaKH = '"+txt2.Text+"'";
+            command.CommandText = "update KhachHang set TenKH = '"+txt3.Text+"', SDT = '"+txt4.Text+"', DiaChi = '"+txt5.Text+"' where MaKH = '"+txt2.Text+"'";
             command.ExecuteNonQuery();
             loadData();
+            MessageBox.Show("Cập nhật thông tin khách hàng thành công");
         }
 
         private void btnKhoitao_Click(object sender, EventArgs e)

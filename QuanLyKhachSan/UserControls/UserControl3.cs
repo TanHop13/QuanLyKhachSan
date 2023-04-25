@@ -15,7 +15,7 @@ namespace QuanLyKhachSan.UserControls
     {
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
+        string str = @"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
@@ -56,14 +56,16 @@ namespace QuanLyKhachSan.UserControls
             command.CommandText = "insert into Phong values('" + txt10.Text + "', '" + txt11.Text + "', '" + txtLoai.Text + "', '" + txt12.Checked + "')";
             command.ExecuteNonQuery();
             loadData();
+            MessageBox.Show("Thêm thông tin phòng thành công");
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "update Phong set MaP = '" + txt10.Text + "', TenP = '" + txt11.Text + "', TinhTrang = '" + txt12.Checked + "', LoaiP = '" + txtLoai.Text + "' where MaP = '" + txt10.Text + "'";
+            command.CommandText = "update Phong set TenP = '" + txt11.Text + "', TinhTrang = '" + txt12.Checked + "', LoaiP = '" + txtLoai.Text + "' where MaP = '" + txt10.Text + "'";
             command.ExecuteNonQuery();
             loadData();
+            MessageBox.Show("Cập nhật thông tin phòng thành công");
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -72,6 +74,7 @@ namespace QuanLyKhachSan.UserControls
             command.CommandText = "delete from Phong where MaP = '" + txt10.Text + "' ";
             command.ExecuteNonQuery();
             loadData();
+            MessageBox.Show("Xóa thông tin phòng thành công");
         }
 
         private void btnKhoitao3_Click(object sender, EventArgs e)
