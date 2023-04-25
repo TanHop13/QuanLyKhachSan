@@ -133,6 +133,7 @@
     <Compile Include="UserControls\KHInfo.Designer.cs">
       <DependentUpon>KHInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Util\FormClosingHandler.cs" />
     <EmbeddedResource Include="ChiTietHoaDon.resx">
       <DependentUpon>ChiTietHoaDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,8 +199,6 @@
   <ItemGroup>
     <Content Include="LICENSE.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Utils\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -33,11 +33,6 @@ namespace QuanLyKhachSan
 
             navigationControl = new NavigationControl(userControls, panel2);
             navigationControl.Display(0);
-        void Home_Load(object sender, EventArgs e)
-        {
-
-        }
-
     }
 
     private void btnKH_Click(object sender, EventArgs e)
@@ -62,15 +57,7 @@ namespace QuanLyKhachSan
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn thoát???", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
+            Application.Exit();
         }
 
         private void btnBaoCao_Click(object sender, EventArgs e)
@@ -78,6 +65,10 @@ namespace QuanLyKhachSan
             navigationControl.Display(4);
         }
 
-        
+        private void Home_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }

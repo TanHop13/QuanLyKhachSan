@@ -14,14 +14,16 @@ namespace QuanLyKhachSan
 {
     public partial class KhachHang : Form
     {
+        private Login loginForm;
         public static string name = string.Empty;
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
+        string str = @"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
         SqlDataReader dr;
         NavigationControl navigationControl;
-        public KhachHang()
+        public KhachHang(Login loginForm)
         {
+            this.loginForm = loginForm;
             InitializeComponent();
             InitializeNavigationControl();
         }
@@ -46,10 +48,7 @@ namespace QuanLyKhachSan
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn thoát???", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+            Application.Exit();
         }
 
         private void btndatPhong_Click(object sender, EventArgs e)
@@ -85,10 +84,8 @@ namespace QuanLyKhachSan
 
         private void KhachHang_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn thoát???", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+            Application.Exit();
+
         }
     }
 }
