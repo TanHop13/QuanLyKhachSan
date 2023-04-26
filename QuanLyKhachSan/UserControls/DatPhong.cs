@@ -44,10 +44,13 @@ namespace QuanLyKhachSan.UserControls
         private void btnDatPhong_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "insert into HoaDonKhachHang values('" + txtId.Text + "', '" + txtPhong.Text + "', '" + txtLoai.Text + "', '" + dateTimePicker1.Text + "', '" + dateTimePicker2.Text + "', '"+txtMaP.Text+"', '"+name+"')";
+            command.CommandText = "insert into HoaDonKhachHang values('" + txtPhong.Text + "', '" + txtLoai.Text + "', '" + dateTimePicker1.Text + "', '" + dateTimePicker2.Text + "', '" + txtMaP.Text + "', '" + name + "')";
+            command.ExecuteNonQuery();
+            MessageBox.Show("Đặt phòng thành công!");
+            command = connection.CreateCommand();
+            command.CommandText = "update Phong set MaP = '" + txtMaP.Text + "', TenP ='" + txtPhong.Text + "', LoaiP = '" + txtLoai.Text + "', TinhTrang = 1 where MaP = '"+txtMaP.Text+"' ";
             command.ExecuteNonQuery();
             loadData();
-            MessageBox.Show("Đặt phòng thành công!");
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

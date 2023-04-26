@@ -1,6 +1,6 @@
 ﻿namespace QuanLyKhachSan.UserControls
 {
-    partial class UserControl2
+    partial class QLNhanVien
     {
         /// <summary> 
         /// Required designer variable.

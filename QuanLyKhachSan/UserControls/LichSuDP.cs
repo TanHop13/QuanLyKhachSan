@@ -23,7 +23,7 @@ namespace QuanLyKhachSan.UserControls
         void loadData()
         {
             command = connection.CreateCommand();
-            command.CommandText = "select  k.username, p.TenP, h.NgayNhanPhong, h.NgayTraPhong, h.Total from HoaDon h, KhachHang k, Phong p where h.KH = k.MaKH and h.Phong = p.MaP and k.username = '" + name + "'";
+            command.CommandText = "select * from HoaDonKhachHang where TenKH = '"+name+"' ";
             adapter.SelectCommand = command;
             table.Clear(); ;
             adapter.Fill(table);

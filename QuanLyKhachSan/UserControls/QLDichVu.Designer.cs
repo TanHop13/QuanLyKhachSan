@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLyKhachSan.UserControls
 {
-    partial class UserControl4
+    partial class QLDichVu
     {
         /// <summary> 
         /// Required designer variable.

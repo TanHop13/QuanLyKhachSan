@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace QuanLyKhachSan.UserControls
 {
-    public partial class UserControl4 : UserControl
+    public partial class QLNhanVien : UserControl
     {
         SqlConnection connection;
         SqlCommand command;
@@ -22,78 +23,84 @@ namespace QuanLyKhachSan.UserControls
         void loadData()
         {
             command = connection.CreateCommand();
-            command.CommandText = "select * from DichVu";
+            command.CommandText = "select * from NhanVien";
             adapter.SelectCommand = command;
             table.Clear(); ;
             adapter.Fill(table);
-            dataGridView4.DataSource = table;
+            dataGridView2.DataSource = table;
         }
-        public UserControl4()
+        public QLNhanVien()
         {
             InitializeComponent();
         }
-        private void UserControl4_Load(object sender, EventArgs e)
+
+        private void UserControl2_Load(object sender, EventArgs e)
         {
             connection = new SqlConnection(str);
             connection.Open();
             loadData();
         }
 
-        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i;
-            i = dataGridView4.CurrentRow.Index;
-            txt13.Text = dataGridView4.Rows[i].Cells[0].Value.ToString();
-            txt14.Text = dataGridView4.Rows[i].Cells[1].Value.ToString();
-            txt15.Text = dataGridView4.Rows[i].Cells[2].Value.ToString();
+            i = dataGridView2.CurrentRow.Index;
+            txt6.Text = dataGridView2.Rows[i].Cells[0].Value.ToString();
+            txt7.Text = dataGridView2.Rows[i].Cells[1].Value.ToString();
+            txt8.Text = dataGridView2.Rows[i].Cells[2].Value.ToString();
+            txt9.Text = dataGridView2.Rows[i].Cells[3].Value.ToString();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "insert into DichVu values('" + txt13.Text + "', '" + txt14.Text + "', '" + txt15.Text + "')";
+            command.CommandText = "insert into NhanVien values('" + txt7.Text + "', '" + txt8.Text + "', '" + txt9.Text + "')";
             command.ExecuteNonQuery();
             loadData();
+            MessageBox.Show("Thêm thông tin nhân viên thành công");
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "update DichVu set MaDV = '" + txt13.Text + "', TenDV = '" + txt14.Text + "', GiaDV = '" + txt15.Text + "' where MaDV = '" + txt13.Text + "'";
+            command.CommandText = "update NhanVien set TenNV = '" + txt7.Text + "', SDT = '" + txt8.Text + "', DiaChi = '" + txt9.Text + "' where MaNV = '" + txt6.Text + "'";
             command.ExecuteNonQuery();
             loadData();
+            MessageBox.Show("Cập nhật thông tin nhân viên thành công");
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "delete from DichVu where MaDV = '" + txt13.Text + "' ";
+            command.CommandText = "delete from NhanVien where MaNV = '" + txt6.Text + "' ";
             command.ExecuteNonQuery();
             loadData();
+            MessageBox.Show("Xóa thông tin nhân viên thành công");
         }
 
-        private void btnKhoitao4_Click(object sender, EventArgs e)
+        private void btnKhoitao2_Click(object sender, EventArgs e)
         {
-            txt13.Text = "";
-            txt14.Text = "";
-            txt15.Text = "";
+            txt6.Text = "";
+            txt7.Text = "";
+            txt8.Text = "";
+            txt9.Text = "";
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if(txtSearch4.Text == "")
+            if(txtSearch2.Text == "")
             {
                 loadData();
             }   
             else
             {
                 command = connection.CreateCommand();
-                command.CommandText = "select * from DichVu where MaDV = '" + txtSearch4.Text + "' ";
+                command.CommandText = "select * from NhanVien where MaNV = '" + txtSearch2.Text + "' ";
                 command.ExecuteNonQuery();
                 SqlDataReader reader = command.ExecuteReader();
                 DataTable dt = new DataTable();
                 dt.Load(reader);
-                dataGridView4.DataSource = dt;
+                dataGridView2.DataSource = dt;
             }    
         }
     }

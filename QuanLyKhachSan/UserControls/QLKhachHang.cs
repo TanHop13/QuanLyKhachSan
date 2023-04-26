@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace QuanLyKhachSan.UserControls
 {
-    public partial class UserControl1 : UserControl
+    public partial class QLKhachHang : UserControl
     {
         SqlConnection connection;
         SqlCommand command;
@@ -28,7 +28,7 @@ namespace QuanLyKhachSan.UserControls
             adapter.Fill(table);
             dataGridView1.DataSource = table;
         }
-        public UserControl1()
+        public QLKhachHang()
         {
             InitializeComponent();
         }

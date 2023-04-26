@@ -42,8 +42,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lb = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.DVG1.SuspendLayout();
             this.SuspendLayout();
@@ -84,8 +82,6 @@
             // 
             // DVG1
             // 
-            this.DVG1.Controls.Add(this.txtId);
-            this.DVG1.Controls.Add(this.lb);
             this.DVG1.Controls.Add(this.dateTimePicker2);
             this.DVG1.Controls.Add(this.label5);
             this.DVG1.Controls.Add(this.label4);
@@ -146,7 +142,7 @@
             // txtLoai
             // 
             this.txtLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoai.Location = new System.Drawing.Point(187, 160);
+            this.txtLoai.Location = new System.Drawing.Point(187, 147);
             this.txtLoai.Name = "txtLoai";
             this.txtLoai.Size = new System.Drawing.Size(100, 27);
             this.txtLoai.TabIndex = 8;
@@ -171,7 +167,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 163);
+            this.label3.Location = new System.Drawing.Point(31, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 20);
             this.label3.TabIndex = 5;
@@ -196,24 +192,6 @@
             this.label1.Size = new System.Drawing.Size(84, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Mã Phòng";
-            // 
-            // lb
-            // 
-            this.lb.AutoSize = true;
-            this.lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb.Location = new System.Drawing.Point(31, 124);
-            this.lb.Name = "lb";
-            this.lb.Size = new System.Drawing.Size(32, 20);
-            this.lb.TabIndex = 13;
-            this.lb.Text = "Mã";
-            // 
-            // txtId
-            // 
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(187, 121);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 27);
-            this.txtId.TabIndex = 14;
             // 
             // DatPhong
             // 
@@ -250,7 +228,5 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Label lb;
     }
 }

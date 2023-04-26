@@ -22,7 +22,7 @@ namespace QuanLyKhachSan.UserControls
         void loadData()
         {
             command = connection.CreateCommand();
-            command.CommandText = "select h.Total, k.TenKH,d.TenDV, p.TenP, h.MaHD, n.TenNV from ChiTietHoaDon c, HoaDon h, DichVu d, KhachHang k, NhanVien n, Phong p where c.IDHoaDon = h.MaHD and c.IdDichVu = d.MaDV and h.KH = k.MaKH and h.NV = n.MaNV and h.Phong = p.MaP\r\n";
+            command.CommandText = "select d.MaHD, h.TenKH, v.TenNV, d.Phong, d.NgayNhanPhong, d.NgayTraPhong, d.Total from HoaDon d, KhachHang h, NhanVien v where d.KH = h.MaKH and d.NV = v.MaNV";
             adapter.SelectCommand = command;
             table.Clear(); ;
             adapter.Fill(table);
@@ -36,7 +36,7 @@ namespace QuanLyKhachSan.UserControls
         private void UserControl5_Load(object sender, EventArgs e)
         {
             connection = new SqlConnection(str);
-            connection.Open(); 
+            connection.Open();
             loadData();
         }
 
@@ -45,12 +45,13 @@ namespace QuanLyKhachSan.UserControls
         {
             int i;
             i = dataGridView1.CurrentRow.Index;
-            txtMaHD.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
+            txtHD.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
             txtKH.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+            txtNhanvien.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
             txtPhong.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
-            txtDV.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
-            txtHD.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();   
-            txtNhanvien.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
+            txtNgayNhan.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+            txtNgayTra.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
+            txtMaHD.Text = dataGridView1.Rows[i].Cells[6].Value.ToString();
         }
 
     }

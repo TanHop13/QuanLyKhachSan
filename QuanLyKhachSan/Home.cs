@@ -24,10 +24,10 @@ namespace QuanLyKhachSan
         {
             List<UserControl> userControls = new List<UserControl>()
             {
-                new UserControl1(),
-                new UserControl2(),
-                new UserControl3(),
-                new UserControl4(),
+                new QLKhachHang(),
+                new QLNhanVien(),
+                new QLPhong(),
+                new QLDichVu(),
                 new QLBaoCao(),
             };
 
