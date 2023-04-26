@@ -87,13 +87,20 @@ namespace QuanLyKhachSan.UserControls
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            command = connection.CreateCommand();
-            command.CommandText = "select * from Phong where MaP = '" + txtSearch3.Text + "' ";
-            command.ExecuteNonQuery();
-            SqlDataReader reader = command.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(reader);
-            dataGridView3.DataSource = dt;
+            if (txtSearch3.Text == "")
+            {
+                loadData();
+            } 
+            else
+            {
+                command = connection.CreateCommand();
+                command.CommandText = "select * from Phong where MaP = '" + txtSearch3.Text + "' ";
+                command.ExecuteNonQuery();
+                SqlDataReader reader = command.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+                dataGridView3.DataSource = dt;
+            }    
         }
     }
 }

@@ -88,13 +88,20 @@ namespace QuanLyKhachSan.UserControls
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            command = connection.CreateCommand();
-            command.CommandText = "select * from NhanVien where MaNV = '"+txtSearch2.Text+"' ";
-            command.ExecuteNonQuery();
-            SqlDataReader reader = command.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(reader);
-            dataGridView2.DataSource = dt;
+            if(txtSearch2.Text == "")
+            {
+                loadData();
+            }   
+            else
+            {
+                command = connection.CreateCommand();
+                command.CommandText = "select * from NhanVien where MaNV = '" + txtSearch2.Text + "' ";
+                command.ExecuteNonQuery();
+                SqlDataReader reader = command.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+                dataGridView2.DataSource = dt;
+            }    
         }
     }
 }

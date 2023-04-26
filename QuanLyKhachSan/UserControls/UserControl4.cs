@@ -81,13 +81,20 @@ namespace QuanLyKhachSan.UserControls
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            command = connection.CreateCommand();
-            command.CommandText = "select * from DichVu where MaDV = '" + txtSearch4.Text + "' ";
-            command.ExecuteNonQuery();
-            SqlDataReader reader = command.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(reader);
-            dataGridView4.DataSource = dt;
+            if(txtSearch4.Text == "")
+            {
+                loadData();
+            }   
+            else
+            {
+                command = connection.CreateCommand();
+                command.CommandText = "select * from DichVu where MaDV = '" + txtSearch4.Text + "' ";
+                command.ExecuteNonQuery();
+                SqlDataReader reader = command.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+                dataGridView4.DataSource = dt;
+            }    
         }
     }
 }

@@ -89,13 +89,20 @@ namespace QuanLyKhachSan.UserControls
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            command = connection.CreateCommand();
-            command.CommandText = "select * from KhachHang where MaKH = '"+txtSearch1.Text+"' ";
-            command.ExecuteNonQuery();  
-            SqlDataReader reader = command.ExecuteReader();
-            DataTable dt = new DataTable(); 
-            dt.Load(reader);
-            dataGridView1.DataSource = dt;  
+            if (txtSearch1.Text == "")
+            {
+                loadData();
+            }
+            else 
+            {
+                command = connection.CreateCommand();
+                command.CommandText = "select * from KhachHang where MaKH = '" + txtSearch1.Text + "' ";
+                command.ExecuteNonQuery();
+                SqlDataReader reader = command.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+                dataGridView1.DataSource = dt;
+            }
         }
     }
 }
