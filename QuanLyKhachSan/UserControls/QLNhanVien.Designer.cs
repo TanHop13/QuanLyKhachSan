@@ -63,10 +63,10 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(458, -1);
+            this.btnDelete.Location = new System.Drawing.Point(458, 0);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(100, 33);
+            this.btnDelete.Size = new System.Drawing.Size(100, 41);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Xoá";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -76,10 +76,10 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(319, -1);
+            this.btnUpdate.Location = new System.Drawing.Point(309, 0);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(100, 33);
+            this.btnUpdate.Size = new System.Drawing.Size(112, 32);
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Sửa";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -89,10 +89,10 @@
             // 
             this.btnInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert.Location = new System.Drawing.Point(156, -1);
+            this.btnInsert.Location = new System.Drawing.Point(150, 0);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(100, 33);
+            this.btnInsert.Size = new System.Drawing.Size(112, 32);
             this.btnInsert.TabIndex = 6;
             this.btnInsert.Text = "Thêm";
             this.btnInsert.UseVisualStyleBackColor = false;
@@ -124,9 +124,9 @@
             // 
             this.btnKhoitao2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnKhoitao2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhoitao2.Location = new System.Drawing.Point(458, 30);
+            this.btnKhoitao2.Location = new System.Drawing.Point(458, 35);
             this.btnKhoitao2.Name = "btnKhoitao2";
-            this.btnKhoitao2.Size = new System.Drawing.Size(88, 41);
+            this.btnKhoitao2.Size = new System.Drawing.Size(100, 36);
             this.btnKhoitao2.TabIndex = 8;
             this.btnKhoitao2.Text = "Khởi tạo";
             this.btnKhoitao2.UseVisualStyleBackColor = false;
@@ -134,65 +134,74 @@
             // 
             // txt9
             // 
-            this.txt9.Location = new System.Drawing.Point(691, 247);
+            this.txt9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt9.Location = new System.Drawing.Point(691, 221);
             this.txt9.Name = "txt9";
-            this.txt9.Size = new System.Drawing.Size(192, 22);
+            this.txt9.Size = new System.Drawing.Size(192, 27);
             this.txt9.TabIndex = 7;
             // 
             // txt8
             // 
-            this.txt8.Location = new System.Drawing.Point(691, 200);
+            this.txt8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt8.Location = new System.Drawing.Point(691, 178);
             this.txt8.Name = "txt8";
-            this.txt8.Size = new System.Drawing.Size(192, 22);
+            this.txt8.Size = new System.Drawing.Size(192, 27);
             this.txt8.TabIndex = 6;
             // 
             // txt7
             // 
-            this.txt7.Location = new System.Drawing.Point(691, 153);
+            this.txt7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt7.Location = new System.Drawing.Point(691, 135);
             this.txt7.Name = "txt7";
-            this.txt7.Size = new System.Drawing.Size(120, 22);
+            this.txt7.Size = new System.Drawing.Size(120, 27);
             this.txt7.TabIndex = 5;
             // 
             // txt6
             // 
+            this.txt6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt6.Location = new System.Drawing.Point(691, 92);
             this.txt6.Name = "txt6";
-            this.txt6.Size = new System.Drawing.Size(120, 22);
+            this.txt6.ReadOnly = true;
+            this.txt6.Size = new System.Drawing.Size(120, 27);
             this.txt6.TabIndex = 4;
             // 
             // lbDiachiNV
             // 
             this.lbDiachiNV.AutoSize = true;
-            this.lbDiachiNV.Location = new System.Drawing.Point(565, 250);
+            this.lbDiachiNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDiachiNV.Location = new System.Drawing.Point(565, 224);
             this.lbDiachiNV.Name = "lbDiachiNV";
-            this.lbDiachiNV.Size = new System.Drawing.Size(47, 16);
+            this.lbDiachiNV.Size = new System.Drawing.Size(61, 20);
             this.lbDiachiNV.TabIndex = 3;
             this.lbDiachiNV.Text = "Địa chỉ";
             // 
             // lbSDTNV
             // 
             this.lbSDTNV.AutoSize = true;
-            this.lbSDTNV.Location = new System.Drawing.Point(565, 206);
+            this.lbSDTNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSDTNV.Location = new System.Drawing.Point(565, 182);
             this.lbSDTNV.Name = "lbSDTNV";
-            this.lbSDTNV.Size = new System.Drawing.Size(85, 16);
+            this.lbSDTNV.Size = new System.Drawing.Size(106, 20);
             this.lbSDTNV.TabIndex = 2;
             this.lbSDTNV.Text = "Số điện thoại";
             // 
             // lbTenNV
             // 
             this.lbTenNV.AutoSize = true;
-            this.lbTenNV.Location = new System.Drawing.Point(565, 159);
+            this.lbTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenNV.Location = new System.Drawing.Point(565, 140);
             this.lbTenNV.Name = "lbTenNV";
-            this.lbTenNV.Size = new System.Drawing.Size(91, 16);
+            this.lbTenNV.Size = new System.Drawing.Size(113, 20);
             this.lbTenNV.TabIndex = 1;
             this.lbTenNV.Text = "Tên nhân viên";
             // 
             // lbMaNV
             // 
             this.lbMaNV.AutoSize = true;
+            this.lbMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaNV.Location = new System.Drawing.Point(565, 98);
             this.lbMaNV.Name = "lbMaNV";
-            this.lbMaNV.Size = new System.Drawing.Size(86, 16);
+            this.lbMaNV.Size = new System.Drawing.Size(108, 20);
             this.lbMaNV.TabIndex = 0;
             this.lbMaNV.Text = "Mã nhân viên";
             // 
