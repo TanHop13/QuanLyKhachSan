@@ -9,7 +9,7 @@ namespace QuanLyKhachSan.DTO
 {
     public class BillInfo
     {
-        public BillInfo(int id, int billID, DateTime? ngayXuatHD, int chiPhi, int idDV)
+        public BillInfo(int id, int billID, DateTime? ngayXuatHD, decimal chiPhi, int idDV)
         {
             this.ID = id;
             this.MaHD = billID;
@@ -22,21 +22,21 @@ namespace QuanLyKhachSan.DTO
         {
             this.ID = (int)row["ID"];
             this.MaHD = (int)row["IDHoaDon"];
-            this.NgayXuatHD = (DateTime?)row["NgayXuatHD"];
-            this.ChiPhi = (int)row["ChiPhi"];
-            this.IdDV = (int)row["IdDV"];
+            this.NgayXuatHD = (DateTime?)row["NgayXuatHoaDon"];
+            this.ChiPhi = (decimal)row["ChiPhi"];
+            this.IdDV = (int)row["IdDichVu"];
         }
 
         private int iD;
         private int maHD;
         private DateTime? ngayXuatHD;
-        private int chiPhi;
+        private decimal chiPhi;
         private int idDV;
 
         public int ID { get => iD; set => iD = value; }
         public int MaHD { get => maHD; set => maHD = value; }
         public DateTime? NgayXuatHD { get => ngayXuatHD; set => ngayXuatHD = value; }
-        public int ChiPhi { get => chiPhi; set => chiPhi = value; }
+        public decimal ChiPhi { get => chiPhi; set => chiPhi = value; }
         public int IdDV { get => idDV; set => idDV = value; }
     }
 }

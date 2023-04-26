@@ -17,7 +17,7 @@ namespace QuanLyKhachSan.DAO
 
         public int GetBillIDByRoomID(int id)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("select * from dbo.HoaDon where MaHD = " + id);
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from dbo.HoaDon where Phong = " + id);
 
             if (data.Rows.Count > 0)
             {

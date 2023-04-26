@@ -9,7 +9,7 @@ namespace QuanLyKhachSan.DTO
 {
     public class Bill
     {
-        public Bill(int id, int maKH, int maNV, DateTime? dateCheckIn, DateTime? dateCheckOut, double total, int maP)
+        public Bill(int id, int maKH, int maNV, DateTime? dateCheckIn, DateTime? dateCheckOut, decimal total, int maP)
         {
             this.ID = id;
             this.MaNV = maNV;
@@ -25,16 +25,16 @@ namespace QuanLyKhachSan.DTO
             this.ID = (int)row["MaHD"];
             this.MaKH = (int)row["KH"];
             this.MaNV = (int)row["NV"];
-            this.DateCheckIn = (DateTime?)row["NgayDatPhong"];
-            this.DateCheckOut = (DateTime?)row["NgayHetHan"];
+            this.DateCheckIn = (DateTime?)row["NgayNhanPhong"];
+            this.DateCheckOut = (DateTime?)row["NgayTraPhong"];
             this.MaP = (int)row["Phong"];
-            this.Total = (double?)row["Total"];
+            this.Total = (decimal)row["Total"];
         }
 
         private DateTime? dateCheckIn;
         private DateTime? dateCheckOut;
         private int iD;
-        private double? total;
+        private decimal total;
         private int maKH;
         private int maNV;
         private int maP;
@@ -42,7 +42,7 @@ namespace QuanLyKhachSan.DTO
         public DateTime? DateCheckIn { get => dateCheckIn; set => dateCheckIn = value; }
         public DateTime? DateCheckOut { get => dateCheckOut; set => dateCheckOut = value; }
         public int ID { get => iD; set => iD = value; }
-        public double? Total { get => total; set => total = value; }
+        public decimal Total { get => total; set => total = value; }
         public int MaKH { get => maKH; set => maKH = value; }
         public int MaNV { get => maNV; set => maNV = value; }
         public int MaP { get => maP; set => maP = value; }
