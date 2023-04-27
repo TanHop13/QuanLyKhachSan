@@ -131,7 +131,7 @@ go
 --from HoaDonKhachHang 
 --where MaP = 203
 
---exec dbo.LTP_InsertBill @idTable = 203
+exec dbo.LTP_InsertBill @idTable = 203
 
---exec dbo.LTP_InsertBillInfo @idRoom = 203, @idBill = 3, @idDV = 3, @ChiPhi = 75000
+exec dbo.LTP_InsertBillInfo @idRoom = 203, @idBill = 3, @idDV = 3, @ChiPhi = 75000
 

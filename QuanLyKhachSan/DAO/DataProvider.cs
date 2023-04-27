@@ -33,17 +33,16 @@ namespace QuanLyKhachSan.DAO
 
                 if (parameter != null)
                 {
-                    //string[] listPara = query.Split(' ');
-                    //int i = 0;
-                    //foreach (string item in listPara)
-                    //{
-                    //    if (item.Contains('@'))
-                    //    {
-                    //        command.Parameters.AddWithValue(item, parameter[i]);
-                    //        i++;
-                    //    }
-                    //}
-                    command.Parameters.AddRange(parameter);
+                    string[] listPara = query.Split(' ');
+                    int i = 0;
+                    foreach (string item in listPara)
+                    {
+                        if (item.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(item, parameter[i]);
+                            i++;
+                        }
+                    }
                 }
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);

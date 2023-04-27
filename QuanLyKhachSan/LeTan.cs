@@ -126,6 +126,23 @@ namespace QuanLyKhachSan
             showBill(room.MaP);
         }
 
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            Room room = lsvBill.Tag as Room;
+
+            int idBill = BillDAO.Instance.GetBillIDByRoomID(room.MaP);
+
+            if (idBill != -1)
+            {
+                if (MessageBox.Show("Xác nhận thanh toán hóa đơn?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                {
+                    BillDAO.Instance.CheckOut(idBill);
+                    showBill(room.MaP);
+                }
+            }
+
+        }
+
         #endregion
 
 
