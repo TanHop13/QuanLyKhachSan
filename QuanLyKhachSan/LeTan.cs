@@ -19,6 +19,7 @@ namespace QuanLyKhachSan
         {
             InitializeComponent();
 
+            LoadDichVu();
             LoadRoom();
         }
 
@@ -55,17 +56,25 @@ namespace QuanLyKhachSan
             lsvBill.Items.Clear();
             List<Menu> listBillInfo = MenuDAO.Instance.GetListMenuByRoom(id);
 
+            decimal totalPrice = 0;
             foreach (Menu item in listBillInfo)
             {
                 ListViewItem lsvItem = new ListViewItem(item.IdDV.ToString());
                 lsvItem.SubItems.Add(item.TenDV.ToString());
                 lsvItem.SubItems.Add(item.GiaDV.ToString());
+                totalPrice += item.GiaDV;
 
                 lsvBill.Items.Add(lsvItem);
             }
+            txbTotalPrice.Text = totalPrice.ToString();
         }
 
-
+        void LoadDichVu()
+        {
+            List<Menu> listDichVu = MenuDAO.Instance.GetListDichVu();
+            cbDichVu.DataSource = listDichVu;
+            cbDichVu.DisplayMember = "TenDV";
+        }
         #endregion
 
 
@@ -74,6 +83,7 @@ namespace QuanLyKhachSan
         void btn_Click(object sender, EventArgs e)
         {
             int roomID = ((sender as Button).Tag as Room).MaP;
+            lsvBill.Tag = (sender as Button).Tag;
             showBill(roomID);
         }
 
@@ -82,9 +92,42 @@ namespace QuanLyKhachSan
             Application.Exit();
         }
 
+        private void cbDichVu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int i = 0;
+
+            ComboBox cb = new ComboBox();
+
+            if (cb.SelectedItem == null)
+                return;
+
+            QuanLyKhachSan.DTO.Menu selected = cb.SelectedItem as QuanLyKhachSan.DTO.Menu;
+        }
+
+        private void btnAddDV_Click(object sender, EventArgs e)
+        {
+            Room room = lsvBill.Tag as Room;
+
+            int idBill = BillDAO.Instance.GetBillIDByRoomID(room.MaP);
+            int idDV = (cbDichVu.SelectedItem as Menu).IdDV;
+            decimal ChiPhi = (cbDichVu.SelectedItem as Menu).GiaDV;
+
+
+            if (idBill == -1)
+            {
+                BillDAO.Instance.InsertBill(room.MaP);
+                BillInfoDAO.Instance.InsertBillInfo(room.MaP, BillDAO.Instance.GetMaxIDBill(), idDV, ChiPhi);
+
+            }
+            else
+            {
+                BillInfoDAO.Instance.InsertBillInfo(room.MaP, idBill, idDV, ChiPhi);
+            }
+            showBill(room.MaP);
+        }
 
         #endregion
 
-        
+
     }
 }

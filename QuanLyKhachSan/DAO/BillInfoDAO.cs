@@ -35,5 +35,11 @@ namespace QuanLyKhachSan.DAO
             return listBillInfo;
         }
 
+        public void InsertBillInfo(int idRoom, int idBill, int idDV, decimal ChiPhi)
+        {
+            DataProvider.Instance.ExecuteNonQuery("exec dbo.LTP_InsertBillInfo @idRoom , @idBill , @idDV , @ChiPhi ", new object[] { idRoom, idBill, idDV, ChiPhi });
+
+        }
+
     }
 }

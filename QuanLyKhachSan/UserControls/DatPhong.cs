@@ -44,7 +44,9 @@ namespace QuanLyKhachSan.UserControls
         private void btnDatPhong_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "insert into HoaDonKhachHang values('" + txtPhong.Text + "', '" + txtLoai.Text + "', '" + dateTimePicker1.Text + "', '" + dateTimePicker2.Text + "', '" + txtMaP.Text + "', '" + name + "')";
+            string startDate = dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss");
+            string endDate = dateTimePicker2.Value.ToString("yyyy-MM-dd HH:mm:ss");
+            command.CommandText = "insert into HoaDonKhachHang values('" + txtPhong.Text + "', '" + txtLoai.Text + "', '" + startDate + "', '" + endDate + "', '" + txtMaP.Text + "', '" + name + "')";
             command.ExecuteNonQuery();
             MessageBox.Show("Đặt phòng thành công!");
             command = connection.CreateCommand();

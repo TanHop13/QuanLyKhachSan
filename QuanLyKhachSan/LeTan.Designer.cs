@@ -31,25 +31,22 @@ namespace QuanLyKhachSan
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.lsvBill = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cbPhong = new System.Windows.Forms.ComboBox();
-            this.btnDoiPhong = new System.Windows.Forms.Button();
-            this.btnNhanP = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txbTotalPrice = new System.Windows.Forms.TextBox();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.cbDichVu = new System.Windows.Forms.ComboBox();
             this.btnAddDV = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.flpRoom = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ttMenuTTKH = new System.Windows.Forms.ToolStripMenuItem();
             this.ttMenuHD = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +55,7 @@ namespace QuanLyKhachSan
             this.panel2.Controls.Add(this.lsvBill);
             this.panel2.Location = new System.Drawing.Point(507, 98);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(408, 359);
+            this.panel2.Size = new System.Drawing.Size(462, 359);
             this.panel2.TabIndex = 1;
             // 
             // lsvBill
@@ -69,54 +66,59 @@ namespace QuanLyKhachSan
             this.columnHeader3});
             this.lsvBill.GridLines = true;
             this.lsvBill.HideSelection = false;
-            this.lsvBill.Location = new System.Drawing.Point(4, 3);
+            this.lsvBill.Location = new System.Drawing.Point(7, 6);
             this.lsvBill.Name = "lsvBill";
-            this.lsvBill.Size = new System.Drawing.Size(401, 353);
+            this.lsvBill.Size = new System.Drawing.Size(452, 353);
             this.lsvBill.TabIndex = 0;
             this.lsvBill.UseCompatibleStateImageBehavior = false;
             this.lsvBill.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID Dịch Vụ";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Tên Dịch Vụ";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Đơn giá";
+            // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.cbPhong);
-            this.panel3.Controls.Add(this.btnDoiPhong);
-            this.panel3.Controls.Add(this.btnNhanP);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.txbTotalPrice);
             this.panel3.Controls.Add(this.btnThanhToan);
             this.panel3.Location = new System.Drawing.Point(507, 463);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(408, 84);
+            this.panel3.Size = new System.Drawing.Size(459, 84);
             this.panel3.TabIndex = 2;
             // 
-            // cbPhong
+            // label1
             // 
-            this.cbPhong.FormattingEnabled = true;
-            this.cbPhong.Location = new System.Drawing.Point(4, 50);
-            this.cbPhong.Name = "cbPhong";
-            this.cbPhong.Size = new System.Drawing.Size(107, 24);
-            this.cbPhong.TabIndex = 5;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(311, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 17);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "VNĐ";
             // 
-            // btnDoiPhong
+            // txbTotalPrice
             // 
-            this.btnDoiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoiPhong.Location = new System.Drawing.Point(4, 5);
-            this.btnDoiPhong.Name = "btnDoiPhong";
-            this.btnDoiPhong.Size = new System.Drawing.Size(107, 41);
-            this.btnDoiPhong.TabIndex = 4;
-            this.btnDoiPhong.Text = "ĐỔI PHÒNG";
-            this.btnDoiPhong.UseVisualStyleBackColor = true;
-            // 
-            // btnNhanP
-            // 
-            this.btnNhanP.Location = new System.Drawing.Point(159, 5);
-            this.btnNhanP.Name = "btnNhanP";
-            this.btnNhanP.Size = new System.Drawing.Size(94, 69);
-            this.btnNhanP.TabIndex = 4;
-            this.btnNhanP.Text = "NHẬN PHÒNG";
-            this.btnNhanP.UseVisualStyleBackColor = true;
+            this.txbTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbTotalPrice.Location = new System.Drawing.Point(172, 30);
+            this.txbTotalPrice.Name = "txbTotalPrice";
+            this.txbTotalPrice.ReadOnly = true;
+            this.txbTotalPrice.Size = new System.Drawing.Size(133, 22);
+            this.txbTotalPrice.TabIndex = 6;
+            this.txbTotalPrice.Text = "0";
+            this.txbTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnThanhToan
             // 
-            this.btnThanhToan.Location = new System.Drawing.Point(311, 5);
+            this.btnThanhToan.Location = new System.Drawing.Point(357, 5);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(94, 69);
             this.btnThanhToan.TabIndex = 4;
@@ -130,6 +132,7 @@ namespace QuanLyKhachSan
             this.cbDichVu.Name = "cbDichVu";
             this.cbDichVu.Size = new System.Drawing.Size(253, 24);
             this.cbDichVu.TabIndex = 3;
+            this.cbDichVu.SelectedIndexChanged += new System.EventHandler(this.cbDichVu_SelectedIndexChanged);
             // 
             // btnAddDV
             // 
@@ -139,23 +142,7 @@ namespace QuanLyKhachSan
             this.btnAddDV.TabIndex = 4;
             this.btnAddDV.Text = "THÊM";
             this.btnAddDV.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(866, 58);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(49, 22);
-            this.numericUpDown1.TabIndex = 5;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.btnAddDV.Click += new System.EventHandler(this.btnAddDV_Click);
             // 
             // flpRoom
             // 
@@ -174,7 +161,7 @@ namespace QuanLyKhachSan
             this.thoátToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(936, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(981, 28);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -197,25 +184,12 @@ namespace QuanLyKhachSan
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID Dịch Vụ";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Tên Dịch Vụ";
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Đơn giá";
-            // 
             // LeTan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(936, 576);
+            this.ClientSize = new System.Drawing.Size(981, 576);
             this.Controls.Add(this.flpRoom);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.btnAddDV);
             this.Controls.Add(this.cbDichVu);
             this.Controls.Add(this.panel3);
@@ -226,7 +200,7 @@ namespace QuanLyKhachSan
             this.Text = " ";
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.panel3.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -241,18 +215,16 @@ namespace QuanLyKhachSan
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox cbDichVu;
         private System.Windows.Forms.Button btnAddDV;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.FlowLayoutPanel flpRoom;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ttMenuTTKH;
         private System.Windows.Forms.ToolStripMenuItem ttMenuHD;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
-        private System.Windows.Forms.ComboBox cbPhong;
-        private System.Windows.Forms.Button btnDoiPhong;
-        private System.Windows.Forms.Button btnNhanP;
         private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.TextBox txbTotalPrice;
+        private System.Windows.Forms.Label label1;
     }
 }

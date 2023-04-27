@@ -1,5 +1,6 @@
 ﻿using QuanLyKhachSan.DTO;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace QuanLyKhachSan.DAO
 {
@@ -26,6 +27,23 @@ namespace QuanLyKhachSan.DAO
             }
 
             return -1;
+        }
+
+        public void InsertBill(int id)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("exec LTP_InsertBill @idTable = ", new object[] {id});
+        }
+
+        public int GetMaxIDBill()
+        {
+            try
+            {
+                return (int)DataProvider.Instance.ExecuteScalar("select max(MaHD) from dbo.HoaDon");
+            }
+            catch
+            {
+                return 1;
+            }
         }
 
     }

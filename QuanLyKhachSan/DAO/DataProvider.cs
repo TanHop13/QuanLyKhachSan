@@ -55,6 +55,11 @@ namespace QuanLyKhachSan.DAO
             return data;
         }
 
+        internal DataTable ExecuteQuery(string v, SqlParameter param)
+        {
+            throw new NotImplementedException();
+        }
+
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int data = 0;

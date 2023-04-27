@@ -24,7 +24,7 @@ namespace QuanLyKhachSan.DAO
         {
             List<Menu> listMenu = new List<Menu>();
 
-            string query = "select dv.MaDV, dv.TenDV, dv.GiaDV from ChiTietHoaDon ct, HoaDon hd, DichVu dv where ct.IDHoaDon = hd.MaHD and ct.IdDichVu = dv.MaDV and hd.Phong = " + id;
+            string query = "select dv.MaDV, dv.TenDV, dv.GiaDV from ChiTietHoaDon ct, HoaDon hd, DichVu dv, Phong p where ct.IDHoaDon = hd.MaHD and ct.IdDichVu = dv.MaDV and hd.Phong = p.MaP and p.TinhTrang = 1 and hd.Phong = +" + id;
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
             foreach (DataRow item in data.Rows)
@@ -33,6 +33,21 @@ namespace QuanLyKhachSan.DAO
                 listMenu.Add(menu);
             }
             return listMenu;
+        }
+
+        public List<Menu> GetListDichVu()
+        {
+            List<Menu> listDV = new List<Menu>();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from DichVu");
+
+            foreach (DataRow item in data.Rows)
+            {
+                Menu menu = new Menu(item);
+                listDV.Add(menu);
+            }
+
+            return listDV;
         }
     }
 }
