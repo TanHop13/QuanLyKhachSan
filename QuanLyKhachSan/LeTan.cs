@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Menu = QuanLyKhachSan.DTO.Menu;
 
 namespace QuanLyKhachSan
 {
@@ -52,12 +53,13 @@ namespace QuanLyKhachSan
         void showBill(int id)
         {
             lsvBill.Items.Clear();
-            List<BillInfo> listBillInfo = BillInfoDAO.Instance.GetListBillInfo(BillDAO.Instance.GetBillIDByRoomID(id));
+            List<Menu> listBillInfo = MenuDAO.Instance.GetListMenuByRoom(id);
 
-            foreach (BillInfo item in listBillInfo)
+            foreach (Menu item in listBillInfo)
             {
                 ListViewItem lsvItem = new ListViewItem(item.IdDV.ToString());
-                lsvItem.SubItems.Add(item.ChiPhi.ToString());
+                lsvItem.SubItems.Add(item.TenDV.ToString());
+                lsvItem.SubItems.Add(item.GiaDV.ToString());
 
                 lsvBill.Items.Add(lsvItem);
             }

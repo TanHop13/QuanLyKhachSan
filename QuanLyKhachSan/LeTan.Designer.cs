@@ -46,6 +46,7 @@ namespace QuanLyKhachSan
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -64,7 +65,8 @@ namespace QuanLyKhachSan
             // 
             this.lsvBill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader2,
+            this.columnHeader3});
             this.lsvBill.GridLines = true;
             this.lsvBill.HideSelection = false;
             this.lsvBill.Location = new System.Drawing.Point(4, 3);
@@ -201,7 +203,11 @@ namespace QuanLyKhachSan
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Giá";
+            this.columnHeader2.Text = "Tên Dịch Vụ";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Đơn giá";
             // 
             // LeTan
             // 
@@ -247,5 +253,6 @@ namespace QuanLyKhachSan
         private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }
