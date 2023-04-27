@@ -131,7 +131,13 @@ go
 --from HoaDonKhachHang 
 --where MaP = 203
 
-exec dbo.LTP_InsertBill @idTable = 203
+--select max(MaHD) from dbo.HoaDon
 
-exec dbo.LTP_InsertBillInfo @idRoom = 203, @idBill = 3, @idDV = 3, @ChiPhi = 75000
+--exec dbo.LTP_InsertBill @idTable = 203
+
+--exec dbo.LTP_InsertBillInfo @idRoom = 203, @idBill = 3, @idDV = 3, @ChiPhi = 75000
+
+update dbo.Phong set TinhTrang = 0 where MaP = 101
+select *
+from Phong
 

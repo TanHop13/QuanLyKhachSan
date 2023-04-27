@@ -56,17 +56,17 @@ namespace QuanLyKhachSan
             lsvBill.Items.Clear();
             List<Menu> listBillInfo = MenuDAO.Instance.GetListMenuByRoom(id);
 
-            decimal totalPrice = 0;
+            //decimal totalPrice = 0;
             foreach (Menu item in listBillInfo)
             {
                 ListViewItem lsvItem = new ListViewItem(item.IdDV.ToString());
                 lsvItem.SubItems.Add(item.TenDV.ToString());
                 lsvItem.SubItems.Add(item.GiaDV.ToString());
-                totalPrice += item.GiaDV;
+
+                LoadTotalPrice();
 
                 lsvBill.Items.Add(lsvItem);
             }
-            txbTotalPrice.Text = totalPrice.ToString();
         }
 
         void LoadDichVu()
@@ -75,6 +75,23 @@ namespace QuanLyKhachSan
             cbDichVu.DataSource = listDichVu;
             cbDichVu.DisplayMember = "TenDV";
         }
+
+        public void LoadTotalPrice()
+        {
+            Room room = lsvBill.Tag as Room;
+            int idBill = BillDAO.Instance.GetBillIDByRoomID(room.MaP);
+
+            if (idBill != -1)
+            {
+                txbTotalPrice.Text = (BillDAO.Instance.LoadPrice(idBill)).ToString();
+            }
+            else
+            {
+                txbTotalPrice.Text = "0";
+            }
+        }
+
+
         #endregion
 
 

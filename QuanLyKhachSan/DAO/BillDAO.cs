@@ -48,8 +48,14 @@ namespace QuanLyKhachSan.DAO
 
         public void CheckOut (int id)
         {
-            string query = "update dbo.Phong set TinhTrang = 0 where MaP = " + id;
+            string query = "UPDATE dbo.Phong SET TinhTrang = 0 WHERE MaP IN(SELECT Phong.MaP FROM dbo.Phong, dbo.HoaDon WHERE Phong.MaP = HoaDon.Phong AND MaHD = " + id + ") " ;
             DataProvider.Instance.ExecuteNonQuery(query);
+        }
+
+        public decimal LoadPrice(int id)
+        {
+            string query = "exec dbo.GetTotalByMaHD @MaHD = "+ id +" select Total from HoaDon where MaHD = " + id;      
+            return (decimal)DataProvider.Instance.ExecuteScalar(query);
         }
 
     }
