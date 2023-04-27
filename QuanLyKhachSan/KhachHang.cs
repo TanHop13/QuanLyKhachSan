@@ -21,12 +21,20 @@ namespace QuanLyKhachSan
         string str = @"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
         SqlDataReader dr;
         NavigationControl navigationControl;
+        private DataRow item;
+
         public KhachHang(Login loginForm)
         {
             this.loginForm = loginForm;
             InitializeComponent();
             InitializeNavigationControl();
         }
+
+        public KhachHang(DataRow item)
+        {
+            this.item = item;
+        }
+
         public void InitializeNavigationControl()
         {
             List<UserControl> userControls = new List<UserControl>()

@@ -1,5 +1,6 @@
 ﻿using QuanLyKhachSan.DTO;
 using System.Data;
+using System;
 using System.Data.SqlClient;
 
 namespace QuanLyKhachSan.DAO
@@ -57,6 +58,12 @@ namespace QuanLyKhachSan.DAO
             string query = "exec dbo.GetTotalByMaHD @MaHD = "+ id +" select Total from HoaDon where MaHD = " + id;      
             return (decimal)DataProvider.Instance.ExecuteScalar(query);
         }
+
+        public DataTable GetBillListByDate(DateTime checkIn, DateTime checkOut)
+        {
+            return DataProvider.Instance.ExecuteQuery("exec LTS_GetBillByDate @checkIn , @checkout", new object[] {checkIn,checkOut});
+        }
+
 
     }
 }

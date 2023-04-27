@@ -111,7 +111,7 @@ namespace QuanLyKhachSan
 
         private void cbDichVu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int i = 0;
+            //int i = 0;
 
             ComboBox cb = new ComboBox();
 
@@ -160,8 +160,24 @@ namespace QuanLyKhachSan
 
         }
 
+        private void ttMenuTTKH_Click(object sender, EventArgs e)
+        {
+            LTfThongTinKH f = new LTfThongTinKH();
+            f.ShowDialog();
+        }
+
+
         #endregion
 
+        private void ttMenuHD_Click(object sender, EventArgs e)
+        {
+            LTfHoaDon f = new LTfHoaDon();
+            f.ShowDialog();
+        }
 
+        private void LeTan_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

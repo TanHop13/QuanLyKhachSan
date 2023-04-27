@@ -76,6 +76,14 @@ namespace QuanLyKhachSan
                 loggedIn = true;
             }
 
+            if (txtUser.Text == "letan" && txtPass.Text=="123")
+            {
+                LeTan lt = new LeTan();
+                this.Hide();
+                lt.Show();
+                loggedIn = true;
+            }
+
             if (!loggedIn)
             {
                 MessageBox.Show("Vui long kiem tra lai tai khoan va mat khau!!!");

@@ -29,6 +29,7 @@ namespace QuanLyKhachSan
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LeTan));
             this.panel2 = new System.Windows.Forms.Panel();
             this.lsvBill = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -76,10 +77,12 @@ namespace QuanLyKhachSan
             // columnHeader1
             // 
             this.columnHeader1.Text = "ID Dịch Vụ";
+            this.columnHeader1.Width = 87;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Tên Dịch Vụ";
+            this.columnHeader2.Width = 124;
             // 
             // columnHeader3
             // 
@@ -171,12 +174,14 @@ namespace QuanLyKhachSan
             this.ttMenuTTKH.Name = "ttMenuTTKH";
             this.ttMenuTTKH.Size = new System.Drawing.Size(165, 24);
             this.ttMenuTTKH.Text = "Thông tin khách hàng";
+            this.ttMenuTTKH.Click += new System.EventHandler(this.ttMenuTTKH_Click);
             // 
             // ttMenuHD
             // 
             this.ttMenuHD.Name = "ttMenuHD";
-            this.ttMenuHD.Size = new System.Drawing.Size(81, 24);
-            this.ttMenuHD.Text = "Hóa đơn";
+            this.ttMenuHD.Size = new System.Drawing.Size(92, 24);
+            this.ttMenuHD.Text = "Doanh thu";
+            this.ttMenuHD.Click += new System.EventHandler(this.ttMenuHD_Click);
             // 
             // thoátToolStripMenuItem
             // 
@@ -196,9 +201,12 @@ namespace QuanLyKhachSan
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "LeTan";
-            this.Text = " ";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Lễ Tân";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LeTan_FormClosing);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

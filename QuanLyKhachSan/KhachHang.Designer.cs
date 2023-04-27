@@ -65,7 +65,7 @@
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Khách sạn ABC";
+            this.groupBox1.Text = "Khách sạn HTH";
             // 
             // btnThongTin
             // 
@@ -175,8 +175,9 @@
             this.Controls.Add(this.btnGiaoDich);
             this.Controls.Add(this.btnThongTin);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "KhachHang";
-            this.Text = "KhachHang";
+            this.Text = "Khách sạn HTH";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.KhachHang_FormClosing);
             this.Load += new System.EventHandler(this.KhachHang_Load);
             this.groupBox1.ResumeLayout(false);

@@ -69,23 +69,23 @@ begin
 end
 go
 
---CREATE PROCEDURE [dbo].[GetTotalByMaHD] @MaHD INT
---AS
---BEGIN
---DECLARE @TotalMoney DECIMAL(18,2)
---SELECT @TotalMoney = SUM(b.ChiPhi) + ( ABS(( DAY(NgayTraPhong) - DAY(NgayNhanPhong)) * 24 ) 
---										+ ABS(( DATEPART(hour, NgayTraPhong) - DATEPART(hour, NgayNhanPhong) ))) * d.GiaP
---							FROM HoaDon a, ChiTietHoaDon b, Phong c, Type d
---							WHERE a.MaHD = @MaHD AND a.MaHD = b.IDHoaDon AND a.Phong = c.MaP AND c.LoaiP = d.ID
---							GROUP BY NgayTraPhong, NgayNhanPhong, GiaP
+CREATE PROCEDURE [dbo].[GetTotalByMaHD] @MaHD INT
+AS
+BEGIN
+DECLARE @TotalMoney DECIMAL(18,2)
+SELECT @TotalMoney = SUM(b.ChiPhi) + ( ABS(( DAY(NgayTraPhong) - DAY(NgayNhanPhong)) * 24 ) 
+										+ ABS(( DATEPART(hour, NgayTraPhong) - DATEPART(hour, NgayNhanPhong) ))) * d.GiaP
+							FROM HoaDon a, ChiTietHoaDon b, Phong c, Type d
+							WHERE a.MaHD = @MaHD AND a.MaHD = b.IDHoaDon AND a.Phong = c.MaP AND c.LoaiP = d.ID
+							GROUP BY NgayTraPhong, NgayNhanPhong, GiaP
 
---UPDATE HoaDon
---SET Total = @TotalMoney
---WHERE MaHD = @MaHD
+UPDATE HoaDon
+SET Total = @TotalMoney
+WHERE MaHD = @MaHD
 
---End
+End
 
---exec dbo.GetTotalByMaHD @MaHD = 1
+exec dbo.GetTotalByMaHD @MaHD = 3
 
 ----StoreProc Them Hoa Don
 --Create PROCEDURE LTP_InsertBill
@@ -137,7 +137,20 @@ go
 
 --exec dbo.LTP_InsertBillInfo @idRoom = 203, @idBill = 3, @idDV = 3, @ChiPhi = 75000
 
-update dbo.Phong set TinhTrang = 0 where MaP = 101
+UPDATE dbo.Phong
+SET TinhTrang = 0
+WHERE MaP IN (
+  SELECT Phong.MaP
+  FROM dbo.Phong, dbo.HoaDon
+  WHERE Phong.MaP = HoaDon.Phong
+    AND MaHD = 1
+		)
+
+
+
+
+
 select *
 from Phong
 
+exec dbo.GetTotalByMaHD @MaHD = 1 select Total from HoaDon where MaHD = 1
