@@ -47,6 +47,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txt6 = new System.Windows.Forms.TextBox();
             this.txt7 = new System.Windows.Forms.TextBox();
+            this.btnKhoiTao = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,6 +152,7 @@
             // 
             // txt2
             // 
+            this.txt2.Enabled = false;
             this.txt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt2.Location = new System.Drawing.Point(759, 110);
             this.txt2.Name = "txt2";
@@ -163,7 +165,7 @@
             this.lbDiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDiachi.Location = new System.Drawing.Point(618, 318);
             this.lbDiachi.Name = "lbDiachi";
-            this.lbDiachi.Size = new System.Drawing.Size(47, 16);
+            this.lbDiachi.Size = new System.Drawing.Size(51, 17);
             this.lbDiachi.TabIndex = 3;
             this.lbDiachi.Text = "Địa chỉ";
             // 
@@ -173,7 +175,7 @@
             this.lbSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSDT.Location = new System.Drawing.Point(618, 245);
             this.lbSDT.Name = "lbSDT";
-            this.lbSDT.Size = new System.Drawing.Size(85, 16);
+            this.lbSDT.Size = new System.Drawing.Size(91, 17);
             this.lbSDT.TabIndex = 2;
             this.lbSDT.Text = "Số điện thoại";
             // 
@@ -183,7 +185,7 @@
             this.lbTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTen.Location = new System.Drawing.Point(618, 173);
             this.lbTen.Name = "lbTen";
-            this.lbTen.Size = new System.Drawing.Size(103, 16);
+            this.lbTen.Size = new System.Drawing.Size(111, 17);
             this.lbTen.TabIndex = 1;
             this.lbTen.Text = "Tên khách hàng";
             // 
@@ -193,7 +195,7 @@
             this.lbMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMa.Location = new System.Drawing.Point(618, 115);
             this.lbMa.Name = "lbMa";
-            this.lbMa.Size = new System.Drawing.Size(98, 16);
+            this.lbMa.Size = new System.Drawing.Size(105, 17);
             this.lbMa.TabIndex = 0;
             this.lbMa.Text = "Mã khách hàng";
             // 
@@ -212,7 +214,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(621, 381);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 16);
+            this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 9;
             this.label2.Text = "Username";
             // 
@@ -221,7 +223,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(621, 424);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 16);
+            this.label3.Size = new System.Drawing.Size(73, 17);
             this.label3.TabIndex = 10;
             this.label3.Text = "PassWord";
             // 
@@ -241,11 +243,25 @@
             this.txt7.Size = new System.Drawing.Size(163, 22);
             this.txt7.TabIndex = 12;
             // 
-            // UserControl1
+            // btnKhoiTao
+            // 
+            this.btnKhoiTao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(90)))));
+            this.btnKhoiTao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhoiTao.Location = new System.Drawing.Point(823, 495);
+            this.btnKhoiTao.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKhoiTao.Name = "btnKhoiTao";
+            this.btnKhoiTao.Size = new System.Drawing.Size(100, 33);
+            this.btnKhoiTao.TabIndex = 13;
+            this.btnKhoiTao.Text = "Khởi tạo";
+            this.btnKhoiTao.UseVisualStyleBackColor = false;
+            this.btnKhoiTao.Click += new System.EventHandler(this.btnKhoitao_Click);
+            // 
+            // QLKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.Controls.Add(this.btnKhoiTao);
             this.Controls.Add(this.txt7);
             this.Controls.Add(this.txt6);
             this.Controls.Add(this.label3);
@@ -266,7 +282,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lbMa);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "UserControl1";
+            this.Name = "QLKhachHang";
             this.Size = new System.Drawing.Size(993, 585);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -296,5 +312,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt6;
         private System.Windows.Forms.TextBox txt7;
+        private System.Windows.Forms.Button btnKhoiTao;
     }
 }

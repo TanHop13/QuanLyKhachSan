@@ -177,6 +177,7 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "KhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Khách sạn HTH";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.KhachHang_FormClosing);
             this.Load += new System.EventHandler(this.KhachHang_Load);

@@ -25,7 +25,7 @@ namespace QuanLyKhachSan
         {
             SqlConnection connection = new SqlConnection(@"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
             connection.Open();
-            string query = " select * from KhachHang where username = '" + txtUser.Text + "' and pass = '" + txtPassword.Text + "'";
+            string query = " select * from KhachHang where username = '" + txtUser.Text + "'";
             SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
             DataTable dt = new DataTable();
             adapter.Fill(dt);

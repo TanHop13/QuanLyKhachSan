@@ -166,9 +166,6 @@ namespace QuanLyKhachSan
             f.ShowDialog();
         }
 
-
-        #endregion
-
         private void ttMenuHD_Click(object sender, EventArgs e)
         {
             LTfHoaDon f = new LTfHoaDon();
@@ -179,5 +176,9 @@ namespace QuanLyKhachSan
         {
             Application.Exit();
         }
+
+        #endregion
+
+
     }
 }

@@ -51,7 +51,7 @@ namespace QuanLyKhachSan.UserControls
         private void btnInsert_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "insert into DichVu values('" + txt13.Text + "', '" + txt14.Text + "', '" + txt15.Text + "')";
+            command.CommandText = "insert into DichVu values('" + txt14.Text + "', '" + txt15.Text + "')";
             command.ExecuteNonQuery();
             loadData();
         }
@@ -59,7 +59,7 @@ namespace QuanLyKhachSan.UserControls
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "update DichVu set MaDV = '" + txt13.Text + "', TenDV = '" + txt14.Text + "', GiaDV = '" + txt15.Text + "' where MaDV = '" + txt13.Text + "'";
+            command.CommandText = "update DichVu set TenDV = '" + txt14.Text + "', GiaDV = '" + txt15.Text + "' where MaDV = '" + txt13.Text + "'";
             command.ExecuteNonQuery();
             loadData();
         }

@@ -60,21 +60,22 @@ namespace QuanLyKhachSan.UserControls
             // 
             // txt15
             // 
-            this.txt15.Location = new System.Drawing.Point(667, 206);
+            this.txt15.Location = new System.Drawing.Point(743, 206);
             this.txt15.Name = "txt15";
             this.txt15.Size = new System.Drawing.Size(157, 22);
             this.txt15.TabIndex = 5;
             // 
             // txt14
             // 
-            this.txt14.Location = new System.Drawing.Point(664, 151);
+            this.txt14.Location = new System.Drawing.Point(743, 155);
             this.txt14.Name = "txt14";
             this.txt14.Size = new System.Drawing.Size(157, 22);
             this.txt14.TabIndex = 5;
             // 
             // txt13
             // 
-            this.txt13.Location = new System.Drawing.Point(664, 104);
+            this.txt13.Enabled = false;
+            this.txt13.Location = new System.Drawing.Point(743, 104);
             this.txt13.Name = "txt13";
             this.txt13.Size = new System.Drawing.Size(157, 22);
             this.txt13.TabIndex = 4;
@@ -82,35 +83,38 @@ namespace QuanLyKhachSan.UserControls
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(577, 206);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 16);
+            this.label1.Size = new System.Drawing.Size(97, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Giá Dịch vụ";
             // 
             // lbGia
             // 
             this.lbGia.AutoSize = true;
-            this.lbGia.Location = new System.Drawing.Point(821, 151);
+            this.lbGia.Location = new System.Drawing.Point(743, 174);
             this.lbGia.Name = "lbGia";
-            this.lbGia.Size = new System.Drawing.Size(0, 16);
+            this.lbGia.Size = new System.Drawing.Size(0, 17);
             this.lbGia.TabIndex = 3;
             // 
             // lbTenPhong
             // 
             this.lbTenPhong.AutoSize = true;
-            this.lbTenPhong.Location = new System.Drawing.Point(574, 151);
+            this.lbTenPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenPhong.Location = new System.Drawing.Point(577, 155);
             this.lbTenPhong.Name = "lbTenPhong";
-            this.lbTenPhong.Size = new System.Drawing.Size(78, 16);
+            this.lbTenPhong.Size = new System.Drawing.Size(99, 20);
             this.lbTenPhong.TabIndex = 1;
             this.lbTenPhong.Text = "Tên Dịch vụ";
             // 
             // lbID
             // 
             this.lbID.AutoSize = true;
-            this.lbID.Location = new System.Drawing.Point(574, 104);
+            this.lbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbID.Location = new System.Drawing.Point(577, 104);
             this.lbID.Name = "lbID";
-            this.lbID.Size = new System.Drawing.Size(73, 16);
+            this.lbID.Size = new System.Drawing.Size(94, 20);
             this.lbID.TabIndex = 0;
             this.lbID.Text = "Mã Dịch vụ";
             // 
@@ -198,7 +202,7 @@ namespace QuanLyKhachSan.UserControls
             this.label2.TabIndex = 20;
             this.label2.Text = "Quản lí dịch vụ";
             // 
-            // UserControl4
+            // QLDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -218,7 +222,7 @@ namespace QuanLyKhachSan.UserControls
             this.Controls.Add(this.lbTenPhong);
             this.Controls.Add(this.dataGridView4);
             this.Controls.Add(this.lbID);
-            this.Name = "UserControl4";
+            this.Name = "QLDichVu";
             this.Size = new System.Drawing.Size(933, 492);
             this.Load += new System.EventHandler(this.UserControl4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();

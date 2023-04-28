@@ -86,7 +86,7 @@ namespace QuanLyKhachSan
 
             if (!loggedIn)
             {
-                MessageBox.Show("Vui long kiem tra lai tai khoan va mat khau!!!");
+                MessageBox.Show("Vui lòng kiểm tra tài khoản và mật khẩu!!!");
             }
 
         }
