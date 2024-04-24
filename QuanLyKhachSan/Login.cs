@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using QuanLyKhachSan.UserControls;
 using System.Web;
 using QuanLyKhachSan.Util;
+using System.Security.Cryptography;
 
 namespace QuanLyKhachSan
 {
@@ -41,16 +42,14 @@ namespace QuanLyKhachSan
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //string password = txtPass.Text;
-            //string passwordHash = " select pass from KhachHang where username = '" + txtUser.Text + "'";
-            //bool verify = BCrypt.Net.BCrypt.Verify("password", passwordHash);
+            
             SqlConnection connection = new SqlConnection(@"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
             string query = " select * from Admin where UserAdmin = '" + txtUser.Text + "' and PassWordAdmin = '" + txtPass.Text + "'";
             SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
             DataTable dt = new DataTable(); 
             adapter.Fill(dt);
             SqlConnection connection2 = new SqlConnection(@"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
-            string query2 = " select * from KhachHang where username = '" + txtUser.Text + "' and pass = '" + txtPass.Text + "'";
+            string query2 = " select * from KhachHang where username = '" + txtUser.Text + "' and pass = '" + HashPassword(txtPass.Text) + "'";
             SqlDataAdapter adapter2 = new SqlDataAdapter(query2, connection2);
             DataTable dt2 = new DataTable();
             adapter2.Fill(dt2);
@@ -109,6 +108,32 @@ namespace QuanLyKhachSan
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
             fcHandler.OnFormClosing(sender, e);
+        }
+
+
+        public static string HashPassword(string password)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                // Mã hóa mật khẩu thành một mảng byte
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+                // Chuyển đổi mảng byte thành chuỗi hex
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
+        // Hàm này kiểm tra xem mật khẩu nhập vào có khớp với mật khẩu đã được mã hóa hay không
+        public static bool VerifyPassword(string inputPassword, string hashedPassword)
+        {
+            // Mã hóa mật khẩu nhập vào và so sánh với mật khẩu đã được mã hóa
+            string hashedInputPassword = HashPassword(inputPassword);
+            return hashedInputPassword == hashedPassword;
         }
     }
 }

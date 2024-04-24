@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -54,10 +55,35 @@ namespace QuanLyKhachSan.UserControls
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "update KhachHang set TenKH = '" + textBox2.Text + "', SDT = '" + textBox3.Text + "', DiaChi = '" + textBox4.Text + "', pass = '" + textBox6.Text + "' where username = '" + name + "'";
+            command.CommandText = "update KhachHang set TenKH = '" + textBox2.Text + "', SDT = '" + textBox3.Text + "', DiaChi = '" + textBox4.Text + "', pass = '" + HashPassword(textBox6.Text) + "' where username = '" + name + "'";
             command.ExecuteNonQuery();
             Load_Data();
             MessageBox.Show("Cập nhật thông tin khách hàng thành công!");
+        }
+
+        public static string HashPassword(string password)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                // Mã hóa mật khẩu thành một mảng byte
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+                // Chuyển đổi mảng byte thành chuỗi hex
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
+        // Hàm này kiểm tra xem mật khẩu nhập vào có khớp với mật khẩu đã được mã hóa hay không
+        public static bool VerifyPassword(string inputPassword, string hashedPassword)
+        {
+            // Mã hóa mật khẩu nhập vào và so sánh với mật khẩu đã được mã hóa
+            string hashedInputPassword = HashPassword(inputPassword);
+            return hashedInputPassword == hashedPassword;
         }
     }
 }

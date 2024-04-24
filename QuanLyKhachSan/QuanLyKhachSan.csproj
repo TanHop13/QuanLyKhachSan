@@ -119,10 +119,6 @@
     <Compile Include="LTfThongTinKH.Designer.cs">
       <DependentUpon>LTfThongTinKH.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\HoaDon.cs" />
-    <Compile Include="Model\KhachHang.cs" />
-    <Compile Include="Model\NhanVien.cs" />
-    <Compile Include="Model\ThongKe.cs" />
     <Compile Include="NavigationControl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

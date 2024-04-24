@@ -46,6 +46,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtRePass = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +59,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(603, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 32);
+            this.label1.Size = new System.Drawing.Size(135, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "ĐĂNG KÍ";
             // 
@@ -84,7 +87,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(481, 196);
+            this.label4.Location = new System.Drawing.Point(481, 231);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 25);
             this.label4.TabIndex = 3;
@@ -113,13 +116,14 @@
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(624, 137);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(234, 30);
             this.txtPassword.TabIndex = 7;
             // 
             // txtTên
             // 
             this.txtTên.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTên.Location = new System.Drawing.Point(624, 193);
+            this.txtTên.Location = new System.Drawing.Point(624, 226);
             this.txtTên.Name = "txtTên";
             this.txtTên.Size = new System.Drawing.Size(234, 30);
             this.txtTên.TabIndex = 8;
@@ -219,11 +223,42 @@
             this.label9.Text = "Chào mừng đến với Khách sạn HTH";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(481, 189);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 25);
+            this.label5.TabIndex = 19;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(481, 189);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(86, 25);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "RePass";
+            // 
+            // txtRePass
+            // 
+            this.txtRePass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRePass.Location = new System.Drawing.Point(624, 186);
+            this.txtRePass.Name = "txtRePass";
+            this.txtRePass.PasswordChar = '*';
+            this.txtRePass.Size = new System.Drawing.Size(234, 30);
+            this.txtRePass.TabIndex = 21;
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(951, 520);
+            this.Controls.Add(this.txtRePass);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtĐC);
             this.Controls.Add(this.label8);
@@ -267,5 +302,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtRePass;
     }
 }

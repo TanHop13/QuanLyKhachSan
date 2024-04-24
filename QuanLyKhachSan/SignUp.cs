@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Web;
+using System.Security.Cryptography;
 
 namespace QuanLyKhachSan
 {
@@ -37,13 +38,19 @@ namespace QuanLyKhachSan
             }
             else
             {
-                //String password = txtPassword.Text;
-                //String passwordHash = BCrypt.Net.BCrypt.HashPassword("password");
-                SqlCommand command;
-                command = connection.CreateCommand();
-                command.CommandText = "insert into KhachHang values ('" + txtTên.Text + "', '" + txtSĐT.Text + "', '" + txtĐC.Text + "', '" + txtUser.Text + "', '" + txtPassword.Text + "')";
-                command.ExecuteNonQuery();
-                MessageBox.Show("Đăng kí thành công");
+                if (txtPassword.Text == txtRePass.Text)
+                {
+                    SqlCommand command;
+                    command = connection.CreateCommand();
+                    command.CommandText = "insert into KhachHang values ('" + txtTên.Text + "', '" + txtSĐT.Text + "', '" + txtĐC.Text + "', '" + txtUser.Text + "', '" + HashPassword(txtPassword.Text) + "')";
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Đăng kí thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Vui long nhap mat khau chinh xac");
+                }    
+               
             }
         }
         private void btnCancel_Click(object sender, EventArgs e)
@@ -54,5 +61,32 @@ namespace QuanLyKhachSan
                 this.Close();
             }
         }
+
+        public static string HashPassword(string password)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                // Mã hóa mật khẩu thành một mảng byte
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+                // Chuyển đổi mảng byte thành chuỗi hex
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
+        // Hàm này kiểm tra xem mật khẩu nhập vào có khớp với mật khẩu đã được mã hóa hay không
+        public static bool VerifyPassword(string inputPassword, string hashedPassword)
+        {
+            // Mã hóa mật khẩu nhập vào và so sánh với mật khẩu đã được mã hóa
+            string hashedInputPassword = HashPassword(inputPassword);
+            return hashedInputPassword == hashedPassword;
+        }
+
+      
     }
 }
