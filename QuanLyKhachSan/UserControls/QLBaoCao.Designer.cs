@@ -30,23 +30,19 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.GbxHD = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtNgayTra = new System.Windows.Forms.TextBox();
             this.txtNgayNhan = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtNhanvien = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPhong = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtDV = new System.Windows.Forms.TextBox();
             this.txtKH = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtHD = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.GbxHD.SuspendLayout();
             this.SuspendLayout();
@@ -71,14 +67,10 @@
             this.GbxHD.Controls.Add(this.txtNgayNhan);
             this.GbxHD.Controls.Add(this.label8);
             this.GbxHD.Controls.Add(this.label3);
-            this.GbxHD.Controls.Add(this.txtNhanvien);
-            this.GbxHD.Controls.Add(this.label7);
             this.GbxHD.Controls.Add(this.txtMaHD);
             this.GbxHD.Controls.Add(this.label6);
             this.GbxHD.Controls.Add(this.txtPhong);
             this.GbxHD.Controls.Add(this.label5);
-            this.GbxHD.Controls.Add(this.label4);
-            this.GbxHD.Controls.Add(this.txtDV);
             this.GbxHD.Controls.Add(this.txtKH);
             this.GbxHD.Controls.Add(this.label2);
             this.GbxHD.Controls.Add(this.txtHD);
@@ -89,6 +81,17 @@
             this.GbxHD.TabIndex = 1;
             this.GbxHD.TabStop = false;
             this.GbxHD.Text = "Thông tin hóa đơn";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(30, 413);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(288, 74);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Xuất file exel";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // txtNgayTra
             // 
@@ -122,22 +125,6 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Ngày nhận phòng";
             // 
-            // txtNhanvien
-            // 
-            this.txtNhanvien.Location = new System.Drawing.Point(150, 265);
-            this.txtNhanvien.Name = "txtNhanvien";
-            this.txtNhanvien.Size = new System.Drawing.Size(127, 22);
-            this.txtNhanvien.TabIndex = 12;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(27, 265);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 16);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Nhân viên";
-            // 
             // txtMaHD
             // 
             this.txtMaHD.Location = new System.Drawing.Point(150, 220);
@@ -169,22 +156,6 @@
             this.label5.Size = new System.Drawing.Size(46, 16);
             this.label5.TabIndex = 7;
             this.label5.Text = "Phòng";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 130);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 16);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Dịch vụ";
-            // 
-            // txtDV
-            // 
-            this.txtDV.Location = new System.Drawing.Point(150, 130);
-            this.txtDV.Name = "txtDV";
-            this.txtDV.Size = new System.Drawing.Size(127, 22);
-            this.txtDV.TabIndex = 5;
             // 
             // txtKH
             // 
@@ -219,17 +190,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tổng hóa đơn";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(30, 413);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(288, 74);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Xuất file exel";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // QLBaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -252,16 +212,12 @@
         private System.Windows.Forms.GroupBox GbxHD;
         private System.Windows.Forms.TextBox txtHD;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtDV;
         private System.Windows.Forms.TextBox txtKH;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMaHD;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtPhong;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNhanvien;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNgayTra;
         private System.Windows.Forms.TextBox txtNgayNhan;
         private System.Windows.Forms.Label label8;

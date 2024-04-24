@@ -12,7 +12,7 @@ namespace QuanLyKhachSan.DAO
     {
         private static DataProvider instance;  //partern Singleton
 
-        private string connectionSTR = "Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
+        private string connectionSTR = @"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
 
         public static DataProvider Instance 
         { 

@@ -15,7 +15,7 @@ namespace QuanLyKhachSan.UserControls
     {
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
+        string str = @"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
@@ -73,7 +73,7 @@ namespace QuanLyKhachSan.UserControls
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "update KhachHang set TenKH = '"+txt3.Text+"', SDT = '"+txt4.Text+"', DiaChi = '"+txt5.Text+ "', username = '" + txt6.Text + "', pass = '" + txt7.Text + "' where MaKH = '" + txt2.Text+"'";
+            command.CommandText = "update KhachHang set TenKH = '"+txt3.Text+"', SDT = '"+txt4.Text+"', DiaChi = N'"+txt5.Text+ "', username = '" + txt6.Text + "', pass = '" + txt7.Text + "' where MaKH = '" + txt2.Text+"'";
             command.ExecuteNonQuery();
             loadData();
             MessageBox.Show("Cập nhật thông tin khách hàng thành công");
