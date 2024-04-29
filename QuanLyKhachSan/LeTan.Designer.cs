@@ -46,6 +46,7 @@ namespace QuanLyKhachSan
             this.ttMenuTTKH = new System.Windows.Forms.ToolStripMenuItem();
             this.ttMenuHD = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDP = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -92,6 +93,7 @@ namespace QuanLyKhachSan
             // 
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.txbTotalPrice);
+            this.panel3.Controls.Add(this.btnDP);
             this.panel3.Controls.Add(this.btnThanhToan);
             this.panel3.Location = new System.Drawing.Point(507, 463);
             this.panel3.Name = "panel3";
@@ -104,7 +106,7 @@ namespace QuanLyKhachSan
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(311, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 17);
+            this.label1.Size = new System.Drawing.Size(38, 16);
             this.label1.TabIndex = 7;
             this.label1.Text = "VNĐ";
             // 
@@ -190,6 +192,16 @@ namespace QuanLyKhachSan
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
+            // btnDP
+            // 
+            this.btnDP.Location = new System.Drawing.Point(7, 7);
+            this.btnDP.Name = "btnDP";
+            this.btnDP.Size = new System.Drawing.Size(94, 69);
+            this.btnDP.TabIndex = 4;
+            this.btnDP.Text = "ĐẶT PHÒNG";
+            this.btnDP.UseVisualStyleBackColor = true;
+            this.btnDP.Click += new System.EventHandler(this.btnDP_Click);
+            // 
             // LeTan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -235,5 +247,6 @@ namespace QuanLyKhachSan
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.TextBox txbTotalPrice;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDP;
     }
 }

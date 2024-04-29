@@ -15,14 +15,15 @@ namespace QuanLyKhachSan.UserControls
     {
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
+        //string str = @"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
+        string str = @"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
         void loadData()
         {
             command = connection.CreateCommand();
-            command.CommandText = "select d.MaHD, h.TenKH,  d.Phong, d.NgayNhanPhong, d.NgayTraPhong, d.Total from HoaDon d, KhachHang h, NhanVien v where d.KH = h.MaKH and d.NV = v.MaNV";
+            command.CommandText = "select d.MaHD, h.TenKH,  d.Phong, d.NgayNhanPhong, d.NgayTraPhong, d.Total from HoaDon d, KhachHang h where d.KH = h.MaKH";
             adapter.SelectCommand = command;
             table.Clear(); ;
             adapter.Fill(table);

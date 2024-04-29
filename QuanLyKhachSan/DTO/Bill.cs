@@ -9,10 +9,9 @@ namespace QuanLyKhachSan.DTO
 {
     public class Bill
     {
-        public Bill(int id, int maKH, int maNV, DateTime? dateCheckIn, DateTime? dateCheckOut, decimal total, int maP)
+        public Bill(int id, int maKH, DateTime? dateCheckIn, DateTime? dateCheckOut, decimal total, int maP)
         {
             this.ID = id;
-            this.MaNV = maNV;
             this.MaKH = maKH;
             this.DateCheckIn = dateCheckIn;
             this.DateCheckOut = dateCheckOut;
@@ -24,7 +23,6 @@ namespace QuanLyKhachSan.DTO
         {
             this.ID = (int)row["MaHD"];
             this.MaKH = (int)row["KH"];
-            this.MaNV = (int)row["NV"];
             this.DateCheckIn = (DateTime?)row["NgayNhanPhong"];
             this.DateCheckOut = (DateTime?)row["NgayTraPhong"];
             this.MaP = (int)row["Phong"];
@@ -36,7 +34,6 @@ namespace QuanLyKhachSan.DTO
         private int iD;
         private decimal total;
         private int maKH;
-        private int maNV;
         private int maP;
 
         public DateTime? DateCheckIn { get => dateCheckIn; set => dateCheckIn = value; }
@@ -44,7 +41,6 @@ namespace QuanLyKhachSan.DTO
         public int ID { get => iD; set => iD = value; }
         public decimal Total { get => total; set => total = value; }
         public int MaKH { get => maKH; set => maKH = value; }
-        public int MaNV { get => maNV; set => maNV = value; }
         public int MaP { get => maP; set => maP = value; }
     }
 }
