@@ -188,7 +188,6 @@ namespace QuanLyKhachSan
 
         private void btnDP_Click(object sender, EventArgs e)
         {
-            Room room = lsvBill.Tag as Room;
 
             //int idBill = BillDAO.Instance.GetBillIDByRoomID(room.MaP);
 
@@ -200,6 +199,11 @@ namespace QuanLyKhachSan
             //        showBill(room.MaP);
             //    }
             //}
+            //clearRoom();
+            //LoadRoom();
+
+            LTfDatPhong f = new LTfDatPhong();
+            f.ShowDialog();
             clearRoom();
             LoadRoom();
         }

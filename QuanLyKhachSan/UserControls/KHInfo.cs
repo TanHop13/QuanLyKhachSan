@@ -56,7 +56,7 @@ namespace QuanLyKhachSan.UserControls
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "update KhachHang set TenKH = '" + textBox2.Text + "', SDT = '" + textBox3.Text + "', DiaChi = '" + textBox4.Text + "', pass = '" + HashPassword(textBox6.Text) + "' where username = '" + name + "'";
+            command.CommandText = "update KhachHang set TenKH = 'N" + textBox2.Text + "', SDT = '" + textBox3.Text + "', DiaChi = 'N" + textBox4.Text + "', pass = '" + HashPassword(textBox6.Text) + "' where username = '" + name + "'";
             command.ExecuteNonQuery();
             Load_Data();
             MessageBox.Show("Cập nhật thông tin khách hàng thành công!");

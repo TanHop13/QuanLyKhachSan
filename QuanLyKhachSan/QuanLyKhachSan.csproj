@@ -107,6 +107,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="LTfDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LTfDatPhong.Designer.cs">
+      <DependentUpon>LTfDatPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="LTfHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LTfDatPhong.resx">
+      <DependentUpon>LTfDatPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LTfHoaDon.resx">
       <DependentUpon>LTfHoaDon.cs</DependentUpon>

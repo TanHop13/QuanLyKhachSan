@@ -56,7 +56,7 @@ namespace QuanLyKhachSan.UserControls
         private void btnInsert_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "insert into KhachHang values( '" + txt3.Text + "', '" + txt4.Text + "', '" + txt5.Text + "', '" + txt6.Text + "', '" + txt7.Text + "')";
+            command.CommandText = "insert into KhachHang values( 'N" + txt3.Text + "', 'N" + txt4.Text + "', 'N" + txt5.Text + "', 'N" + txt6.Text + "', 'N" + txt7.Text + "')";
             command.ExecuteNonQuery();
             loadData();
             MessageBox.Show("Thêm thông tin khách hàng thành công");
@@ -74,7 +74,7 @@ namespace QuanLyKhachSan.UserControls
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "update KhachHang set TenKH = '"+txt3.Text+"', SDT = '"+txt4.Text+"', DiaChi = N'"+txt5.Text+ "', username = '" + txt6.Text + "', pass = '" + txt7.Text + "' where MaKH = '" + txt2.Text+"'";
+            command.CommandText = "update KhachHang set TenKH = 'N"+txt3.Text+"', SDT = '"+txt4.Text+"', DiaChi = N'"+txt5.Text+ "', username = '" + txt6.Text + "', pass = '" + txt7.Text + "' where MaKH = '" + txt2.Text+"'";
             command.ExecuteNonQuery();
             loadData();
             MessageBox.Show("Cập nhật thông tin khách hàng thành công");

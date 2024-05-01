@@ -1,4 +1,6 @@
-﻿using QuanLyKhachSan.DAO;
+﻿using Microsoft.ReportingServices.Diagnostics.Internal;
+using QuanLyKhachSan.DAO;
+using QuanLyKhachSan.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,10 +12,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyKhachSan.UserControls
+namespace QuanLyKhachSan
 {
-    public partial class DatPhong : UserControl
+    public partial class LTfDatPhong : Form
     {
+        public LTfDatPhong()
+        {
+            InitializeComponent();
+        }
+
         public static string name = string.Empty;
         SqlConnection connection;
         SqlCommand command;
@@ -31,31 +38,11 @@ namespace QuanLyKhachSan.UserControls
             adapter.Fill(table);
             dataGridView1.DataSource = table;
         }
-        public DatPhong()
-        {
-            InitializeComponent();
-        }
 
-        private void UserControl6_Load(object sender, EventArgs e)
+        private void LTfDatPhong_Load(object sender, EventArgs e)
         {
             connection = new SqlConnection(str);
             connection.Open();
-            loadData();
-        }
-
-        private void btnDatPhong_Click(object sender, EventArgs e)
-        {
-            command = connection.CreateCommand();
-            string startDate = dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss");
-            string endDate = dateTimePicker2.Value.ToString("yyyy-MM-dd HH:mm:ss");
-            command.CommandText = "insert into HoaDonKhachHang values('" + txtPhong.Text + "', '" + txtLoai.Text + "', '" + startDate + "', '" + endDate + "', '" + txtMaP.Text + "', '" + name + "')";
-            command.ExecuteNonQuery();
-            MessageBox.Show("Đặt phòng thành công!");
-            command = connection.CreateCommand();
-            command.CommandText = "update Phong set MaP = '" + txtMaP.Text + "', TenP ='" + txtPhong.Text + "', LoaiP = '" + txtLoai.Text + "', TinhTrang = 1 where MaP = '"+txtMaP.Text+"' ";
-            command.ExecuteNonQuery();
-            int tmp = int.Parse(txtMaP.Text);
-            BillDAO.Instance.InsertBill(tmp);
             loadData();
         }
 
@@ -66,6 +53,22 @@ namespace QuanLyKhachSan.UserControls
             txtPhong.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
             txtLoai.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
             txtMaP.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
+        }
+
+        private void btnDatPhong_Click(object sender, EventArgs e)
+        {
+            command = connection.CreateCommand();
+            string startDate = dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss");
+            string endDate = dateTimePicker2.Value.ToString("yyyy-MM-dd HH:mm:ss");
+            command.CommandText = "insert into HoaDonKhachHang values('" + txtPhong.Text + "', '" + txtLoai.Text + "', '" + startDate + "', '" + endDate + "', '" + txtMaP.Text + "', '" + txtKH.Text + "')";
+            command.ExecuteNonQuery();
+            MessageBox.Show("Đặt phòng thành công!");
+            command = connection.CreateCommand();
+            command.CommandText = "update Phong set MaP = '" + txtMaP.Text + "', TenP ='" + txtPhong.Text + "', LoaiP = '" + txtLoai.Text + "', TinhTrang = 1 where MaP = '" + txtMaP.Text + "' ";
+            command.ExecuteNonQuery();
+            int tmp = int.Parse(txtMaP.Text);
+            BillDAO.Instance.InsertBill(tmp);
+            loadData();
         }
     }
 }

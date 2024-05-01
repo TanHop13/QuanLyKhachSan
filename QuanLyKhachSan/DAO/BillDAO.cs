@@ -19,12 +19,12 @@ namespace QuanLyKhachSan.DAO
 
         public int GetBillIDByRoomID(int id)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("select * from dbo.HoaDon where Phong = " + id);
+            DataTable data = DataProvider.Instance.ExecuteQuery("select HoaDon.MaHD from dbo.HoaDon, dbo.Phong where HoaDon.Phong = Phong.MaP and Phong.MaP = " + id +" and HoaDon.TrangThai = 0");
+            //DataTable data = DataProvider.Instance.ExecuteQuery("select * from dbo.HoaDon where Phong = " + id);
 
-            if (data.Rows.Count > 0)
+            if (data != null && data.Rows.Count > 0)
             {
-                Bill bill = new Bill(data.Rows[0]);
-                return bill.ID;
+                return Convert.ToInt32(data.Rows[0]["MaHD"]);
             }
 
             return -1;
@@ -51,6 +51,8 @@ namespace QuanLyKhachSan.DAO
         {
             string query = "UPDATE dbo.Phong SET TinhTrang = 0 WHERE MaP IN(SELECT Phong.MaP FROM dbo.Phong, dbo.HoaDon WHERE Phong.MaP = HoaDon.Phong AND MaHD = " + id + ") " ;
             DataProvider.Instance.ExecuteNonQuery(query);
+            string query2 = "UPDATE dbo.HoaDon SET TrangThai = 1 WHERE MaHD = " + id;
+            DataProvider.Instance.ExecuteNonQuery(query2);
         }
 
         public decimal LoadPrice(int id)

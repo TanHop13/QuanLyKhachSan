@@ -55,7 +55,7 @@ namespace QuanLyKhachSan.UserControls
         private void btnInsert_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "insert into NhanVien values('" + txt7.Text + "', '" + txt8.Text + "', '" + txt9.Text + "')";
+            command.CommandText = "insert into NhanVien values('N" + txt7.Text + "', 'N" + txt8.Text + "', 'N" + txt9.Text + "')";
             command.ExecuteNonQuery();
             loadData();
             MessageBox.Show("Thêm thông tin nhân viên thành công");
@@ -64,7 +64,7 @@ namespace QuanLyKhachSan.UserControls
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "update NhanVien set TenNV = '" + txt7.Text + "', SDT = '" + txt8.Text + "', DiaChi = '" + txt9.Text + "' where MaNV = '" + txt6.Text + "'";
+            command.CommandText = "update NhanVien set TenNV = 'N" + txt7.Text + "', SDT = '" + txt8.Text + "', DiaChi = 'N" + txt9.Text + "' where MaNV = '" + txt6.Text + "'";
             command.ExecuteNonQuery();
             loadData();
             MessageBox.Show("Cập nhật thông tin nhân viên thành công");
