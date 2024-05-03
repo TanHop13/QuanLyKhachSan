@@ -144,7 +144,7 @@
             this.btnBaoCao.Name = "btnBaoCao";
             this.btnBaoCao.Size = new System.Drawing.Size(208, 49);
             this.btnBaoCao.TabIndex = 0;
-            this.btnBaoCao.Text = "Báo cáo";
+            this.btnBaoCao.Text = "Quản lí hóa đơn";
             this.btnBaoCao.UseVisualStyleBackColor = false;
             this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
             // 

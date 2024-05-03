@@ -15,8 +15,8 @@ namespace QuanLyKhachSan.UserControls
     {
         SqlConnection connection;
         SqlCommand command;
-        //string str = @"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
-        string str = @"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
+        string str = @"Data Source=TAMHOA\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
+        //string str = @"Data Source=TOBI23;Initial Catalog=QuanLyKhachSan;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
@@ -54,5 +54,10 @@ namespace QuanLyKhachSan.UserControls
             txtNgayTra.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BieuDo bieuDo = new BieuDo();
+            bieuDo.Show();
+        }
     }
 }
